@@ -1,0 +1,146 @@
+{% extends "base_2.html" %}
+
+{% block meta %}
+
+<style type="text/css">
+	body{
+
+	}
+	.embed-container { 
+		position: relative; 
+		padding-bottom: 56.25%; 
+		height: 0; 
+		overflow: hidden; 
+		max-width: 100%; 
+	} 
+	.embed-container iframe, .embed-container object, .embed-container embed { 
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 100%; 
+		height: 100%;
+	}
+	.main_title{
+		margin-bottom: 10px;
+		margin-top: 10px;
+		background-color: purple;
+		color: white;
+		font-weight: bolder;
+	}
+	.sidebar{
+		height: 900px;
+		overflow: auto;
+	}
+	.side_card{
+		border: 12px solid purple;
+		position: relative;
+		padding:0px;
+		width: 300px;
+	}
+	.card_title {
+		color: white;
+		position: absolute;
+		bottom: -15px;
+		background-color: purple;
+		padding-bottom: 5px;
+	}
+
+	::selection{
+	  background: purple;
+	}
+
+	.black{
+		background-color: black;
+		padding: 0px;
+	}
+	
+
+</style>
+
+{% endblock %}
+
+{% block title %}FOOD{% endblock %}
+
+
+{% block content %}
+	
+	<!-- Sidebar -->
+	<div class="col s3 sidebar">
+
+		{% for video in all_videos %}
+		    
+		      	<div class="card side_card">
+		      	  <a href="/v/{{video.objectId}}">
+		      	    <div class="card-image waves-effect waves-block waves-light"  >
+		      	      <img width="200px"  src="http://img.youtube.com/vi/{{video.youtube_id}}/0.jpg">
+		      	      <p class='card_title'>• {{video.video_title}}</p>
+		      	      <!-- <img class="activator" src="images/office.jpg"> -->
+		      	    </div>
+		      	  </a>
+		      	</div>
+		          
+		{% endfor %}
+
+	  </div>
+
+	<!-- Content -->
+	<div class="col s9 m7">
+	  <div class="card">
+	  	<span class="card-title">
+	  		<center>
+	  			<p class='main_title'>{{main_object.video_title}}<p>
+	  		</center>
+	  	</span>
+	    
+	    <div class="card-image">
+	     
+	     <div class='embed-container'>
+	     	<iframe width="853" height="480" src="https://www.youtube.com/embed/{{main_object.youtube_id}}?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+	     </div>
+	     <div class="card-action black">
+	     	<script src="https://apis.google.com/js/platform.js"></script>
+
+	     	<div class="g-ytsubscribe" data-channelid="UCtoOk6vvunyUZnJ24bq9kcQ" data-layout="default" data-count="default"></div>
+	     </div>
+	    </div>
+
+	   	
+	    <div class="card-content">
+	      <p class='animation'></p>
+	      <!-- <p>{{main_object.video_script}}</p> -->
+	    </div>
+	    <div class="card-action">
+	      <a href="#">Memed By:</a>
+	      <div class="chip">
+	      <img src="http://graph.facebook.com/{{narrator_object.fb_id}}/picture?type=square" alt="Contact Person">
+	      	{{narrator_object.name}}
+	    </div>
+
+
+	    </div>
+	  </div>
+	</div>
+	
+	<div class="col s2">
+	  
+	      
+	</div>
+    
+    
+{% endblock %}
+
+
+{% block script %}
+<script type="text/javascript" src="/static/typed.js"></script>
+<script type="text/javascript" src="/static/jquery.fittext.js"></script>
+<script type="text/javascript">
+
+	$(function(){
+			$(".main_title").fitText(1.2, { minFontSize: '20px', maxFontSize: '40px' });
+	        $(".animation").typed({
+	            strings: ["{{main_object.video_script}}"],
+	            typeSpeed: 1
+	        });
+	    });
+</script>
+{% endblock %}
