@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 import flask, flask.views
 from flask import render_template
@@ -19,6 +20,10 @@ auth = HTTPBasicAuth()
 from parse_rest.connection import register
 from parse_rest.datatypes import Object, GeoPoint
 from parse_rest.user import User
+
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 users = {
     "john": "hello",
@@ -79,7 +84,8 @@ def home():
     #all_videos = reversed(all_videos)
     main_object = all_videos[0]
     narrator_object = narrators.Query.get(objectId = main_object.narrator)
-    return flask.render_template('index.html',all_videos=all_videos,main_object=main_object,narrator_object=narrator_object)
+    return flask.redirect('/v/%s'%(main_object.objectId))
+    
 
 @app.route('/v/<object_id>/')
 def home2(object_id):
@@ -92,7 +98,7 @@ def home3(object_id,title):
     all_videos = newsmeme.Query.all().limit(10).filter(published=True).order_by("-createdAt")
     main_object = newsmeme.Query.get(objectId=object_id)
     narrator_object = narrators.Query.get(objectId = main_object.narrator)
-    return flask.render_template('index.html',all_videos=all_videos,main_object=main_object,narrator_object=narrator_object)
+    return flask.render_template('index_3.html',all_videos=all_videos,main_object=main_object,narrator_object=narrator_object)
 
 
 @app.route('/news/<news_id>')
@@ -113,20 +119,47 @@ def newsPage(news_id):
 
 
 @app.route('/admin')
-@auth.login_required
 def admin():
-    return flask.render_template('admin.html')
+    return flask.render_template('redirect.html',url="/foodchamber")
 
 @app.route('/api')
 def api():
-    data = spreadsheet_query()
-    return jsonify(arr=data)
+    freeze()
+    return "0"
 
 @app.route('/api/<word>')
 def apis(word):
     data = spreadsheet_query()
     searched_data = [news for news in data if word in news['summary']]
     return jsonify(arr=searched_data)
+
+def freeze():
+    #all_videos = newsmeme.Query.all().limit(3).filter(published='True').order_by("-createdAt")
+    #all_videos = newsmeme.Query.all().filter(published=True).order_by("-createdAt")
+    all_videos = newsmeme.Query.all().limit(10).filter(language='en').order_by("-createdAt")
+    
+    print all_videos
+
+    for video in all_videos:
+        title = title_formatter(video.video_title)
+        title = title.encode('utf-8')
+        #title = title.encode('ascii','ignore')
+        #print title
+        narrator_object = narrators.Query.get(objectId = video.narrator)
+        os.system("mkdir v/%s"%(video.objectId))
+        os.system("mkdir v/%s/%s"%(video.objectId,title))
+        parsed_html = flask.render_template('index_3.html',all_videos=all_videos,main_object=video,narrator_object=narrator_object)
+        rdr_html = flask.render_template('redirect.html',url="/%s/%s"%(video.objectId,title))
+
+        os.system("touch v/%s/index.html"%(video.objectId))
+        os.system("touch v/%s/%s/index.html"%(video.objectId,title))
+
+        with open("v/%s/index.html"%(video.objectId), "wb") as fh:
+            fh.write(rdr_html.encode('utf-8'))
+
+        with open("v/%s/%s/index.html"%(video.objectId,title), "wb") as fh:
+            fh.write(parsed_html.encode('utf-8'))
+
 
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0')
