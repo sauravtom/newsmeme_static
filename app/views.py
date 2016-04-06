@@ -145,11 +145,15 @@ def freeze():
         title = title.encode('utf-8')
         #title = title.encode('ascii','ignore')
         #print title
-        narrator_object = narrators.Query.get(objectId = video.narrator)
+        try:
+            narrator_object = narrators.Query.get(objectId = video.narrator)
+        except:
+            narrator_object = narrator.Query.get(objectId = '1HfjOEgiJj')
+
         os.system("mkdir v/%s"%(video.objectId))
         os.system("mkdir v/%s/%s"%(video.objectId,title))
         parsed_html = flask.render_template('index_3.html',all_videos=all_videos,main_object=video,narrator_object=narrator_object)
-        rdr_html = flask.render_template('redirect.html',url="/%s/%s"%(video.objectId,title))
+        rdr_html = flask.render_template('redirect.html',url="/v/%s/%s"%(video.objectId,title))
 
         os.system("touch v/%s/index.html"%(video.objectId))
         os.system("touch v/%s/%s/index.html"%(video.objectId,title))
