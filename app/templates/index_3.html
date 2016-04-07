@@ -7,29 +7,29 @@
 	
 	<meta itemprop="description" content="{{main_object.video_script}}">
 
-	<meta itemprop="image" content="https://i.ytimg.com/vi/{{main_object.youtube_id}}/hqdefault.jpg">
+	<meta itemprop="image" content="https://i.ytimg.com/vi/{{youtube_id}}/hqdefault.jpg">
 
 	<meta property="og:title" content="{{main_object.video_title}}"/>
 	<meta property="og:description" content="{{main_object.video_script}}"/>
-	<meta property="og:image" content="https://i.ytimg.com/vi/{{main_object.youtube_id}}/hqdefault.jpg"/> 
+	<meta property="og:image" content="https://i.ytimg.com/vi/{{youtube_id}}/hqdefault.jpg"/> 
 	<meta property="og:site_name" content="NewsMeme.in"/> 
 
 	<meta property="og:url" content="newsmeme.in/{{main_object.objectId}}" />
 	<meta property="article:author" content="http://facebook.com/{{narrator_object.fb_id}}" />
 	<meta property="article:publisher" content="https://www.facebook.com/newsmemedotin"/>
 
-	<meta property='og:video' content='http://www.youtube.com/v/{{main_object.youtube_id}}?version=3'/>
+	<meta property='og:video' content='http://www.youtube.com/v/{{youtube_id}}?version=3'/>
 	<meta property='og:video:height' content='360'/>
 	<meta property='og:video:type' content='application/x-shockwave-flash'/>
 	<meta property='og:video:width' content='640'/>
 	<meta property='og:type' content='video'/>
 
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:site" content="@yt2fb" />
+	<meta name="twitter:site" content="@newsmemedotin" />
 	<meta name="twitter:title" content="{{main_object.video_title}}" />
 	<!-- <meta name="twitter:description" content="" /> -->
 	<meta name="twitter:description" content="{{main_object.video_script}}" />
-	<meta name="twitter:image" content="https://i.ytimg.com/vi/{{main_object.youtube_id}}/hqdefault.jpg" />
+	<meta name="twitter:image" content="https://i.ytimg.com/vi/{{youtube_id}}/hqdefault.jpg" />
 					
 	<meta name="viewport" content="width=320, initial-scale=1">
 
@@ -54,6 +54,10 @@
 	.screen{
 		border: 5px white;
 		background: white;
+		overflow-y:scroll;
+	}
+	.screen::-webkit-scrollbar { 
+	    display: none; 
 	}
 	.narrator{
 		color: purple;
@@ -117,16 +121,20 @@
 	    <div class="home"></div>
 	</div>
     
+    <!-- TODO
+		1) Add a modal to menu buttons
+		2) Add a next button
+		3) On small screen change the css a bit (but including bootstrap css changes the layout a bit, might have to recreate it a bit)
+     -->
+
     
 {% endblock %}
 
 
 {% block script %}
+
 	<script type="text/javascript">
-		$(".legal").on("click",function(){
-			$(".overlay").toggleClass("none");
-			$(".legal-scroll").toggleClass("fadeInUp").toggleClass("fadeOutDown");
-			$("html").addClass("no-scroll")
-		})
+		
+
 	</script>
 {% endblock %}

@@ -98,7 +98,8 @@ def home3(object_id,title):
     all_videos = newsmeme.Query.all().limit(10).filter(published=True).order_by("-createdAt")
     main_object = newsmeme.Query.get(objectId=object_id)
     narrator_object = narrators.Query.get(objectId = main_object.narrator)
-    return flask.render_template('index_3.html',all_videos=all_videos,main_object=main_object,narrator_object=narrator_object)
+    youtube_id = main_object.youtube_id.strip()
+    return flask.render_template('index_3.html',all_videos=all_videos,main_object=main_object,narrator_object=narrator_object,youtube_id=youtube_id)
 
 
 @app.route('/news/<news_id>')
@@ -136,7 +137,7 @@ def apis(word):
 def freeze():
     #all_videos = newsmeme.Query.all().limit(3).filter(published='True').order_by("-createdAt")
     #all_videos = newsmeme.Query.all().filter(published=True).order_by("-createdAt")
-    all_videos = newsmeme.Query.all().limit(10).filter(language='en').order_by("-createdAt")
+    all_videos = newsmeme.Query.all().limit(1000).filter(published=True).order_by("-createdAt")
     
     print all_videos
 
@@ -144,11 +145,16 @@ def freeze():
         title = title_formatter(video.video_title)
         title = title.encode('utf-8')
         #title = title.encode('ascii','ignore')
-        #print title
+
+        try:
+            print video.youtube_id
+        except:
+            continue
+
         try:
             narrator_object = narrators.Query.get(objectId = video.narrator)
         except:
-            narrator_object = narrator.Query.get(objectId = '1HfjOEgiJj')
+            narrator_object = narrators.Query.get(objectId = '1HfjOEgiJj')
 
         os.system("mkdir v/%s"%(video.objectId))
         os.system("mkdir v/%s/%s"%(video.objectId,title))
