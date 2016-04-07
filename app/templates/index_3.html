@@ -7,18 +7,18 @@
 	
 	<meta itemprop="description" content="{{main_object.video_script}}">
 
-	<meta itemprop="image" content="https://i.ytimg.com/vi/{{youtube_id}}/hqdefault.jpg">
+	<meta itemprop="image" content="https://i.ytimg.com/vi/{{main_object.youtube_id}}/hqdefault.jpg">
 
 	<meta property="og:title" content="{{main_object.video_title}}"/>
 	<meta property="og:description" content="{{main_object.video_script}}"/>
-	<meta property="og:image" content="https://i.ytimg.com/vi/{{youtube_id}}/hqdefault.jpg"/> 
+	<meta property="og:image" content="https://i.ytimg.com/vi/{{main_object.youtube_id}}/hqdefault.jpg"/> 
 	<meta property="og:site_name" content="NewsMeme.in"/> 
 
 	<meta property="og:url" content="http://newsmeme.in/{{main_object.objectId}}" />
 	<meta property="article:author" content="http://facebook.com/{{narrator_object.fb_id}}" />
 	<meta property="article:publisher" content="https://www.facebook.com/newsmemedotin"/>
 
-	<meta property='og:video' content='http://www.youtube.com/v/{{youtube_id}}?version=3'/>
+	<meta property='og:video' content='http://www.youtube.com/v/{{main_object.youtube_id}}?version=3'/>
 	<meta property='og:video:height' content='360'/>
 	<meta property='og:video:type' content='application/x-shockwave-flash'/>
 	<meta property='og:video:width' content='640'/>
@@ -29,7 +29,7 @@
 	<meta name="twitter:title" content="{{main_object.video_title}}" />
 	<!-- <meta name="twitter:description" content="" /> -->
 	<meta name="twitter:description" content="{{main_object.video_script}}" />
-	<meta name="twitter:image" content="https://i.ytimg.com/vi/{{youtube_id}}/hqdefault.jpg" />
+	<meta name="twitter:image" content="https://i.ytimg.com/vi/{{main_object.youtube_id}}/hqdefault.jpg" />
 					
 	<meta name="viewport" content="width=320, initial-scale=1">
 
@@ -79,6 +79,10 @@
 		top:50%;
 		right: 5px;
 	}
+	.header{
+		padding:2px;
+		font-size: 11px;
+	}
 </style>
 
 {% endblock %}
@@ -96,12 +100,13 @@
 	    <div class="speaker"></div>
 	    <div class="screen">
 	        <!-- Content goes here -->
-	        <h3>NewsMeme</h3>
+	        
+	        <p class='header'>NewsMeme</p>
 
 	        <iframe width="853" height="480" src="https://www.youtube.com/embed/{{main_object.youtube_id}}?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 
 	        <div class='phone_content'>
-		        <p class="title">{{main_object.video_title}}</p>
+		        <p class="title">{{main_object.video_title | foo}}</p>
 		        <hr>
 		        <p class='summary'>{{main_object.video_script}}</p>
 		        <br>
@@ -122,9 +127,10 @@
 	</div>
     
     <!-- TODO
-		1) Add a modal to menu buttons
+		1) Add a modal to menu buttons (or we can just hyperlink)
 		2) Add a next button
-		3) On small screen change the css a bit (but including bootstrap css changes the layout a bit, might have to recreate it a bit)
+		3) Horizontal scrolling div showcasing latest content.
+		4) On small screen change the css a bit (but including bootstrap css changes the layout a bit, might have to recreate it a bit)
      -->
 
     

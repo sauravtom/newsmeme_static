@@ -25,10 +25,6 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-users = {
-    "john": "hello",
-    "foo": "food"
-    }
 
 parse_credentials = {
     "application_id": "2wzSL2IYgy38Q378nNoKSJ23qqqSy5Uu1BW7Slax",
@@ -44,11 +40,9 @@ class newsmeme(Object):
 class narrators(Object):
     pass
 
-@auth.get_password
-def get_pw(username):
-    if username in users:
-        return users.get(username)
-    return None
+@app.template_filter()
+def foo(text):
+    return text.strip()
 
 
 def get_dict(**kwargs):
@@ -57,21 +51,6 @@ def get_dict(**kwargs):
         d[k] = v
     return d
 
-def spreadsheet_query():
-    url = "https://spreadsheets.google.com/feeds/list/1rOvWwcvrKj_aNy4PVGNdUZdPC49d4zE6ncu0nGeN1Xw/od6/public/values?alt=json"
-    #url = "https://spreadsheets.google.com/feeds/list/11f8Nr-FehZDT7j-tK_tQSf2bNkwZmNpRQa55-6wYeRg/od6/public/values?alt=json"
-    json_ob = requests.get(url).json()
-    arr = []
-    for i in json_ob["feed"]["entry"]:
-        d= {}
-        title = i["gsx$title"]["$t"]
-        image_url = i["gsx$imageurl"]["$t"]
-        link = i["gsx$link"]["$t"]
-        summary = i["gsx$summary"]["$t"]
-        news_id = hashlib.md5(title+link).hexdigest()[:6]
-        d = get_dict(news_id=news_id,link=link,image_url=image_url,summary=summary,title=title)
-        arr.append(d)
-    return arr
 
 def title_formatter(text):
     text = text.replace(" ","-")
@@ -98,50 +77,16 @@ def home3(object_id,title):
     all_videos = newsmeme.Query.all().limit(10).filter(published=True).order_by("-createdAt")
     main_object = newsmeme.Query.get(objectId=object_id)
     narrator_object = narrators.Query.get(objectId = main_object.narrator)
-    print main_object.youtube_id
-    youtube_id = main_object.youtube_id.strip()
-    print youtube_id
-    return flask.render_template('index_3.html',all_videos=all_videos,main_object=main_object,narrator_object=narrator_object,youtube_id=youtube_id)
+    return flask.render_template('index_3.html',all_videos=all_videos,main_object=main_object,narrator_object=narrator_object)
 
-
-@app.route('/news/<news_id>')
-def newsPage(news_id):
-    arr = spreadsheet_query()
-    news_data = None
-    
-    #news_data = [news for news in arr where news['news_id'] == news_id]
-
-    for news in arr:
-        if news['news_id'] == news_id:
-            news_data = news
-
-    if not news_data:
-        return flask.render_template('404.html')
-    else:
-        return flask.render_template('news.html',news_data=news_data)
-
-
-@app.route('/admin')
-def admin():
-    return flask.render_template('redirect.html',url="/foodchamber")
 
 @app.route('/api')
 def api():
     freeze()
     return "0"
 
-@app.route('/api/<word>')
-def apis(word):
-    data = spreadsheet_query()
-    searched_data = [news for news in data if word in news['summary']]
-    return jsonify(arr=searched_data)
-
 def freeze():
-    #all_videos = newsmeme.Query.all().limit(3).filter(published='True').order_by("-createdAt")
-    #all_videos = newsmeme.Query.all().filter(published=True).order_by("-createdAt")
     all_videos = newsmeme.Query.all().limit(1000).filter(published=True).order_by("-createdAt")
-    
-    print all_videos
 
     for video in all_videos:
         title = title_formatter(video.video_title)
