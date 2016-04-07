@@ -77,7 +77,7 @@ def home3(object_id,title):
     all_videos = newsmeme.Query.all().limit(10).filter(published=True).order_by("-createdAt")
     main_object = newsmeme.Query.get(objectId=object_id)
     narrator_object = narrators.Query.get(objectId = main_object.narrator)
-    return flask.render_template('index_3.html',all_videos=all_videos,main_object=main_object,narrator_object=narrator_object)
+    return flask.render_template('index_3.html',all_videos=all_videos,main_object=main_object,narrator_object=narrator_object,title=title)
 
 
 @app.route('/api')
@@ -106,7 +106,7 @@ def freeze():
         os.system("mkdir v/%s"%(video.objectId))
         os.system("mkdir v/%s/%s"%(video.objectId,title))
         parsed_html = flask.render_template('index_3.html',all_videos=all_videos,main_object=video,narrator_object=narrator_object)
-        rdr_html = flask.render_template('redirect.html',url="/v/%s/%s"%(video.objectId,title))
+        rdr_html = flask.render_template('redirect.html',url="/v/%s/%s"%(video.objectId,title),video=video,narrator_object=narrator_object)
 
         os.system("touch v/%s/index.html"%(video.objectId))
         os.system("touch v/%s/%s/index.html"%(video.objectId,title))
