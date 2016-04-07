@@ -7,18 +7,18 @@
 	
 	<meta itemprop="description" content="{{main_object.video_script}}">
 
-	<meta itemprop="image" content="https://i.ytimg.com/vi/{{main_object.youtube_id}}/hqdefault.jpg">
+	<meta itemprop="image" content="https://i.ytimg.com/vi/{{main_object.youtube_id | foo}}/hqdefault.jpg">
 
 	<meta property="og:title" content="{{main_object.video_title}}"/>
 	<meta property="og:description" content="{{main_object.video_script}}"/>
-	<meta property="og:image" content="https://i.ytimg.com/vi/{{main_object.youtube_id}}/hqdefault.jpg"/> 
+	<meta property="og:image" content="https://i.ytimg.com/vi/{{main_object.youtube_id | foo}}/hqdefault.jpg"/> 
 	<meta property="og:site_name" content="NewsMeme.in"/> 
 
-	<meta property="og:url" content="http://newsmeme.in/{{main_object.objectId}}" />
+	<meta property="og:url" content="http://newsmeme.in/{{main_object.objectId | foo}}" />
 	<meta property="article:author" content="http://facebook.com/{{narrator_object.fb_id}}" />
 	<meta property="article:publisher" content="https://www.facebook.com/newsmemedotin"/>
 
-	<meta property='og:video' content='http://www.youtube.com/v/{{main_object.youtube_id}}?version=3'/>
+	<meta property='og:video' content='http://www.youtube.com/v/{{main_object.youtube_id | foo}}?version=3'/>
 	<meta property='og:video:height' content='360'/>
 	<meta property='og:video:type' content='application/x-shockwave-flash'/>
 	<meta property='og:video:width' content='640'/>
@@ -29,7 +29,7 @@
 	<meta name="twitter:title" content="{{main_object.video_title}}" />
 	<!-- <meta name="twitter:description" content="" /> -->
 	<meta name="twitter:description" content="{{main_object.video_script}}" />
-	<meta name="twitter:image" content="https://i.ytimg.com/vi/{{main_object.youtube_id}}/hqdefault.jpg" />
+	<meta name="twitter:image" content="https://i.ytimg.com/vi/{{main_object.youtube_id | foo}}/hqdefault.jpg" />
 					
 	<meta name="viewport" content="width=320, initial-scale=1">
 
@@ -106,7 +106,7 @@
 	        <iframe width="853" height="480" src="https://www.youtube.com/embed/{{main_object.youtube_id}}?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 
 	        <div class='phone_content'>
-		        <p class="title">{{main_object.video_title | foo}}</p>
+		        <p class="title">{{main_object.video_title}}</p>
 		        <hr>
 		        <p class='summary'>{{main_object.video_script}}</p>
 		        <br>
