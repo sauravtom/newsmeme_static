@@ -98,7 +98,9 @@ def home3(object_id,title):
     all_videos = newsmeme.Query.all().limit(10).filter(published=True).order_by("-createdAt")
     main_object = newsmeme.Query.get(objectId=object_id)
     narrator_object = narrators.Query.get(objectId = main_object.narrator)
+    print main_object.youtube_id
     youtube_id = main_object.youtube_id.strip()
+    print youtube_id
     return flask.render_template('index_3.html',all_videos=all_videos,main_object=main_object,narrator_object=narrator_object,youtube_id=youtube_id)
 
 
