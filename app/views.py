@@ -82,7 +82,8 @@ def home3(object_id,title):
 
 @app.route('/api')
 def api():
-    freeze()
+    #freeze()
+    push2github()
     return "0"
 
 def freeze():
@@ -117,6 +118,11 @@ def freeze():
         with open("v/%s/%s/index.html"%(video.objectId,title), "wb") as fh:
             fh.write(parsed_html.encode('utf-8'))
 
+def push2github():
+    os.system("git add -u")
+    os.system("git commit -m 'auto test'")
+    os.system("git push origin gh-pages")
+    
 
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0')
