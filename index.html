@@ -1,0 +1,73 @@
+<html>
+	
+	<title>NewsMeme : Video News Summaries </title>
+	<link rel="icon" 
+	      type="image/png" 
+	      href="http://i.imgur.com/QFlOJei.png">
+	<meta name="description" content="NewsMeme.in | Video News Summaries"/>
+
+	<meta itemprop="name" content="NewsMeme Inc.">
+	<meta itemprop="description" content="NewsMeme is a media company that produces short video news summaries.">
+
+	<meta itemprop="image" content="http://i.imgur.com/6HmI5ON.png">
+
+	<meta property="og:title" content="NewsMeme"/>
+	<meta property="og:description" content="Video news Summaries 😄"/>
+	<meta property="og:image" content="http://i.imgur.com/6HmI5ON.png"/> 
+	<meta property="og:site_name" content="NewsMeme.in"/> 
+
+	<meta property="og:url" content="http://newsmeme.in" />
+	<meta property="article:author" content="http://facebook.com/newsmemedotin" />
+	<meta property="article:publisher" content="https://www.facebook.com/newsmemedotin"/>
+
+	<meta property='og:video' content='http://www.youtube.com/v/p1mx3fDZFec?version=3'/>
+	<meta property='og:video:height' content='360'/>
+	<meta property='og:video:type' content='application/x-shockwave-flash'/>
+	<meta property='og:video:width' content='640'/>
+	<meta property='og:type' content='video'/>
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@newsmemedotin" />
+	<meta name="twitter:title" content="NewsMeme.in" />
+	<!-- <meta name="twitter:description" content="" /> -->
+	<meta name="twitter:description" content="Video news Summaries" />
+	<meta name="twitter:image" content="http://i.imgur.com/6HmI5ON.png" />
+					
+	<meta name="viewport" content="width=320, initial-scale=1">
+
+<body>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.0.19.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+<script type="text/javascript">
+	
+	$(document).ready(function() {
+	  			Array.prototype.randomElement = function () {
+	  			    return this[Math.floor(Math.random() * this.length)]
+	  			}
+	  			Parse.initialize("2wzSL2IYgy38Q378nNoKSJ23qqqSy5Uu1BW7Slax", "PS0u3nD68u3rW1Ng8nQdlkNzlgL2Y6N9XD2GXqAP");
+	  		 	var news_query = new Parse.Query(Parse.Object.extend("newsmeme"));
+	  		 	news_query.equalTo("published", true);
+	  		 	news_query.greaterThan('createdAt', moment().subtract('days', 3).toDate());
+
+	  		 	news_query.find({
+	  		 	    success: function(results) {
+	  		 	        var item = results.randomElement();
+	  		 	        //console.log(item.id);
+	  		 	        //console.log(item.get("video_title"));
+	  		 	        window.location.replace("/v/"+item.id);
+	  		 	    },
+	  		 	    error: function() {
+	  		 	        console.log(error);
+	  		 	    }
+	  		 	});
+	  		 	
+	  		 	
+	  		 	
+	  		});
+
+  	//window.location.replace("/v/02rWfZCmF8/4000-करड-रपय-दन-क-तयर-हए-वजय-मलय");
+</script>
+</html>
