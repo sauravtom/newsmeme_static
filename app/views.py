@@ -39,6 +39,12 @@ class newsmeme(Object):
 class narrators(Object):
     pass
 
+def title_formatter(text):
+    text = text.replace(" ","-")
+    text = ''.join(ch for ch in text if ch.isalnum() or ch == '-')
+    return text
+
+
 @app.template_filter()
 def foo(text):
     return text.strip()
