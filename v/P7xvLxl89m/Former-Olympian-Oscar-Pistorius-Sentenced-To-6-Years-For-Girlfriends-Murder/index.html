@@ -109,11 +109,10 @@
 		height: 100%;
 		border: 2px black dashed;
 	}
-	.marvel-device{
-		position: absolute;
-		min-height: 70% !important;
-		max-height: 80% !important;
+	#mobile{
+		height: auto;
 	}
+
 </style>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
@@ -159,38 +158,40 @@
             <div class="billy-video">
 
                 
+	
+	<div id='mobile'>
+		<div class="marvel-device nexus5">
+		    <div class="top-bar"></div>
+		    <div class="sleep"></div>
+		    <div class="camera"></div>
+		    <div class="sensor"></div>
+		    <div class="speaker"></div>
+		    <div class="screen">
 
-	<div class="marvel-device nexus5">
-	    <div class="top-bar"></div>
-	    <div class="sleep"></div>
-	    <div class="camera"></div>
-	    <div class="sensor"></div>
-	    <div class="speaker"></div>
-	    <div class="screen">
-
-	        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/Io5VlZZmYjc
+		        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/Io5VlZZmYjc
 ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 
-	        <video id='vertical_video' autoplay>
-	          <source src="http://newsmemecdn.azureedge.net/newsmeme/I9B4UH023.mp4" type="video/mp4">
-	        	Your browser does not support the video tag.
-	        </video>
+		        <video id='vertical_video' autoplay>
+		          <source src="http://newsmemecdn.azureedge.net/newsmeme/I9B4UH023.mp4" type="video/mp4">
+		        	Your browser does not support the video tag.
+		        </video>
 
-	        <!-- <div class='phone_content'>
-		        <p class="title">asdasd Former Olympian Oscar Pistorius Sentenced To 6 Years For Girlfriend&#39;s Murder</p>
-		        <hr>
-		        <p class='summary'>Oscar Pistorius, the double-amputee who dazzled the world by running in the 2012 Olympics on blade-like prosthetic legs, was sentenced to 6 years in prison for the 2013 murder of his girlfriend, model Reeva Steenkamp. 15 years is the minimum sentence for murder under South African law unless the judge finds mitigating circumstances justifying a lesser penalty. The judge said that Oscar remains a good candidate for rehabilitation.</p>
-		        <br>
-		        <p class="narrator">
-		        	<b>Memed by</b> Bot
-		        </p>
-		    </div> -->
-		    <a href="/">
-		    	<p>Next News</p>
-			</a>
+		        <!-- <div class='phone_content'>
+			        <p class="title">asdasd Former Olympian Oscar Pistorius Sentenced To 6 Years For Girlfriend&#39;s Murder</p>
+			        <hr>
+			        <p class='summary'>Oscar Pistorius, the double-amputee who dazzled the world by running in the 2012 Olympics on blade-like prosthetic legs, was sentenced to 6 years in prison for the 2013 murder of his girlfriend, model Reeva Steenkamp. 15 years is the minimum sentence for murder under South African law unless the judge finds mitigating circumstances justifying a lesser penalty. The judge said that Oscar remains a good candidate for rehabilitation.</p>
+			        <br>
+			        <p class="narrator">
+			        	<b>Memed by</b> Bot
+			        </p>
+			    </div> -->
+			    <a href="/">
+			    	<p>Next News</p>
+				</a>
 
-	    </div>
-	    <div class="home"></div>
+		    </div>
+		    <div class="home"></div>
+		</div>
 	</div>
 
     
@@ -276,6 +277,9 @@
 		  	  "showMethod": "fadeIn",
 		  	  "hideMethod": "fadeOut"
 		  	};
+
+		  	//alert($(window).height());
+		  	$('#mobile').css("height", '300px !important'); 
 
 		};
 

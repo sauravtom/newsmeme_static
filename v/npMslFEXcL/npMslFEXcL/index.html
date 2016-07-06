@@ -109,9 +109,10 @@
 		height: 100%;
 		border: 2px black dashed;
 	}
-	.marvel-device{
-		max-height: 600px !important;
+	#mobile{
+		height: auto;
 	}
+
 </style>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
@@ -157,38 +158,40 @@
             <div class="billy-video">
 
                 
+	
+	<div id='mobile'>
+		<div class="marvel-device nexus5">
+		    <div class="top-bar"></div>
+		    <div class="sleep"></div>
+		    <div class="camera"></div>
+		    <div class="sensor"></div>
+		    <div class="speaker"></div>
+		    <div class="screen">
 
-	<div class="marvel-device nexus5">
-	    <div class="top-bar"></div>
-	    <div class="sleep"></div>
-	    <div class="camera"></div>
-	    <div class="sensor"></div>
-	    <div class="speaker"></div>
-	    <div class="screen">
-
-	        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/3TGiA0FCtic
+		        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/3TGiA0FCtic
 ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 
-	        <video id='vertical_video' autoplay>
-	          <source src="http://newsmemecdn.azureedge.net/newsmeme/0FDFPYIGW.mp4" type="video/mp4">
-	        	Your browser does not support the video tag.
-	        </video>
+		        <video id='vertical_video' autoplay>
+		          <source src="http://newsmemecdn.azureedge.net/newsmeme/0FDFPYIGW.mp4" type="video/mp4">
+		        	Your browser does not support the video tag.
+		        </video>
 
-	        <!-- <div class='phone_content'>
-		        <p class="title">asdasd भारतीय वायुसेना को मिली 3 महिला फाइटर पाइलट</p>
-		        <hr>
-		        <p class='summary'>शनिवार को भारतीय वायु सेना को मिली अपनी पहली तीन महिला अधिकारी फाइटर पायलट्स | वायु सेना के क्षेत्र में इतिहास रचने वाली यह तीन जाबाज़ लड़कियां हैं, मध्यप्रदेश की अवनि चतुर्वेदी, राजस्थान की मोहना सिंह और बिहार की भावना कांत | हैदराबाद के हकिम्पेट एयरफोर्स अकादमी की पासिंग आउट परेड के दौरान रक्षा मंत्री मनोहर पर्रिकर ने इन तीनो का चुनाव किया और अब इन्हे एडवांस लेवल की ट्रेनिंग दी जाएगी, और ट्रेनिंग पूरी होने के बाद यह अपना अपना पद संभालेंगी |</p>
-		        <br>
-		        <p class="narrator">
-		        	<b>Memed by</b> Kritika
-		        </p>
-		    </div> -->
-		    <a href="/">
-		    	<p>Next News</p>
-			</a>
+		        <!-- <div class='phone_content'>
+			        <p class="title">asdasd भारतीय वायुसेना को मिली 3 महिला फाइटर पाइलट</p>
+			        <hr>
+			        <p class='summary'>शनिवार को भारतीय वायु सेना को मिली अपनी पहली तीन महिला अधिकारी फाइटर पायलट्स | वायु सेना के क्षेत्र में इतिहास रचने वाली यह तीन जाबाज़ लड़कियां हैं, मध्यप्रदेश की अवनि चतुर्वेदी, राजस्थान की मोहना सिंह और बिहार की भावना कांत | हैदराबाद के हकिम्पेट एयरफोर्स अकादमी की पासिंग आउट परेड के दौरान रक्षा मंत्री मनोहर पर्रिकर ने इन तीनो का चुनाव किया और अब इन्हे एडवांस लेवल की ट्रेनिंग दी जाएगी, और ट्रेनिंग पूरी होने के बाद यह अपना अपना पद संभालेंगी |</p>
+			        <br>
+			        <p class="narrator">
+			        	<b>Memed by</b> Kritika
+			        </p>
+			    </div> -->
+			    <a href="/">
+			    	<p>Next News</p>
+				</a>
 
-	    </div>
-	    <div class="home"></div>
+		    </div>
+		    <div class="home"></div>
+		</div>
 	</div>
 
     
@@ -274,6 +277,9 @@
 		  	  "showMethod": "fadeIn",
 		  	  "hideMethod": "fadeOut"
 		  	};
+
+		  	//alert($(window).height());
+		  	$('#mobile').css("height", '300px !important'); 
 
 		};
 

@@ -109,9 +109,10 @@
 		height: 100%;
 		border: 2px black dashed;
 	}
-	.marvel-device{
-		max-height: 600px !important;
+	#mobile{
+		height: auto;
 	}
+
 </style>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
@@ -157,38 +158,40 @@
             <div class="billy-video">
 
                 
+	
+	<div id='mobile'>
+		<div class="marvel-device nexus5">
+		    <div class="top-bar"></div>
+		    <div class="sleep"></div>
+		    <div class="camera"></div>
+		    <div class="sensor"></div>
+		    <div class="speaker"></div>
+		    <div class="screen">
 
-	<div class="marvel-device nexus5">
-	    <div class="top-bar"></div>
-	    <div class="sleep"></div>
-	    <div class="camera"></div>
-	    <div class="sensor"></div>
-	    <div class="speaker"></div>
-	    <div class="screen">
-
-	        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/jPBTotQAkPI
+		        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/jPBTotQAkPI
 ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 
-	        <video id='vertical_video' autoplay>
-	          <source src="http://newsmemecdn.azureedge.net/newsmeme/IP6055KIY.mp4" type="video/mp4">
-	        	Your browser does not support the video tag.
-	        </video>
+		        <video id='vertical_video' autoplay>
+		          <source src="http://newsmemecdn.azureedge.net/newsmeme/IP6055KIY.mp4" type="video/mp4">
+		        	Your browser does not support the video tag.
+		        </video>
 
-	        <!-- <div class='phone_content'>
-		        <p class="title">asdasd Ericsson, Nokia plan to prepare India for 5G technology</p>
-		        <hr>
-		        <p class='summary'>Telecom gear makers, Ericsson &amp; Nokia have begun talks, with Indian telcos &amp; policy makers, for possible engagements around fifth-generation, 5G technology, which is still, in the standardization phase, &amp; is likely, to be ready for commercial deployment, in 2020. The initial talks, revolve, around the telcos&#39; interest &amp; their preparedness, for the 5G technology, besides identification, of relevant spectrum band, that will, support the technology.</p>
-		        <br>
-		        <p class="narrator">
-		        	<b>Memed by</b> Bot
-		        </p>
-		    </div> -->
-		    <a href="/">
-		    	<p>Next News</p>
-			</a>
+		        <!-- <div class='phone_content'>
+			        <p class="title">asdasd Ericsson, Nokia plan to prepare India for 5G technology</p>
+			        <hr>
+			        <p class='summary'>Telecom gear makers, Ericsson &amp; Nokia have begun talks, with Indian telcos &amp; policy makers, for possible engagements around fifth-generation, 5G technology, which is still, in the standardization phase, &amp; is likely, to be ready for commercial deployment, in 2020. The initial talks, revolve, around the telcos&#39; interest &amp; their preparedness, for the 5G technology, besides identification, of relevant spectrum band, that will, support the technology.</p>
+			        <br>
+			        <p class="narrator">
+			        	<b>Memed by</b> Bot
+			        </p>
+			    </div> -->
+			    <a href="/">
+			    	<p>Next News</p>
+				</a>
 
-	    </div>
-	    <div class="home"></div>
+		    </div>
+		    <div class="home"></div>
+		</div>
 	</div>
 
     
@@ -274,6 +277,9 @@
 		  	  "showMethod": "fadeIn",
 		  	  "hideMethod": "fadeOut"
 		  	};
+
+		  	//alert($(window).height());
+		  	$('#mobile').css("height", '300px !important'); 
 
 		};
 

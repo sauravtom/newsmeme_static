@@ -109,9 +109,10 @@
 		height: 100%;
 		border: 2px black dashed;
 	}
-	.marvel-device{
-		max-height: 600px !important;
+	#mobile{
+		height: auto;
 	}
+
 </style>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
@@ -157,38 +158,40 @@
             <div class="billy-video">
 
                 
+	
+	<div id='mobile'>
+		<div class="marvel-device nexus5">
+		    <div class="top-bar"></div>
+		    <div class="sleep"></div>
+		    <div class="camera"></div>
+		    <div class="sensor"></div>
+		    <div class="speaker"></div>
+		    <div class="screen">
 
-	<div class="marvel-device nexus5">
-	    <div class="top-bar"></div>
-	    <div class="sleep"></div>
-	    <div class="camera"></div>
-	    <div class="sensor"></div>
-	    <div class="speaker"></div>
-	    <div class="screen">
-
-	        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/hNDiaYg6RoU
+		        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/hNDiaYg6RoU
 ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 
-	        <video id='vertical_video' autoplay>
-	          <source src="http://newsmemecdn.azureedge.net/newsmeme/994IPGUJT.mp4" type="video/mp4">
-	        	Your browser does not support the video tag.
-	        </video>
+		        <video id='vertical_video' autoplay>
+		          <source src="http://newsmemecdn.azureedge.net/newsmeme/994IPGUJT.mp4" type="video/mp4">
+		        	Your browser does not support the video tag.
+		        </video>
 
-	        <!-- <div class='phone_content'>
-		        <p class="title">asdasd No more sexy women in AXE advertisements</p>
-		        <hr>
-		        <p class='summary'>The &#39;Axe Effect&#39; ads, with pouting &amp; skimpily clad women doing anything for male attention, will disappear from screens. Unilever, the world&#39;s 2nd biggest advertiser &amp; owner of Axe brand, announced last week that it will drop sexist stereotypes ads globally. A new-look set of commercials for the brand will soon be on air in India as well. It looks like that Indians are finally waking up to outdated, stereotypical portrayal of women in advertising</p>
-		        <br>
-		        <p class="narrator">
-		        	<b>Memed by</b> Bot
-		        </p>
-		    </div> -->
-		    <a href="/">
-		    	<p>Next News</p>
-			</a>
+		        <!-- <div class='phone_content'>
+			        <p class="title">asdasd No more sexy women in AXE advertisements</p>
+			        <hr>
+			        <p class='summary'>The &#39;Axe Effect&#39; ads, with pouting &amp; skimpily clad women doing anything for male attention, will disappear from screens. Unilever, the world&#39;s 2nd biggest advertiser &amp; owner of Axe brand, announced last week that it will drop sexist stereotypes ads globally. A new-look set of commercials for the brand will soon be on air in India as well. It looks like that Indians are finally waking up to outdated, stereotypical portrayal of women in advertising</p>
+			        <br>
+			        <p class="narrator">
+			        	<b>Memed by</b> Bot
+			        </p>
+			    </div> -->
+			    <a href="/">
+			    	<p>Next News</p>
+				</a>
 
-	    </div>
-	    <div class="home"></div>
+		    </div>
+		    <div class="home"></div>
+		</div>
 	</div>
 
     
@@ -274,6 +277,9 @@
 		  	  "showMethod": "fadeIn",
 		  	  "hideMethod": "fadeOut"
 		  	};
+
+		  	//alert($(window).height());
+		  	$('#mobile').css("height", '300px !important'); 
 
 		};
 

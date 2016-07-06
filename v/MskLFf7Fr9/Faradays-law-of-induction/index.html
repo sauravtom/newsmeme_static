@@ -109,9 +109,10 @@
 		height: 100%;
 		border: 2px black dashed;
 	}
-	.marvel-device{
-		max-height: 600px !important;
+	#mobile{
+		height: auto;
 	}
+
 </style>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
@@ -157,38 +158,40 @@
             <div class="billy-video">
 
                 
+	
+	<div id='mobile'>
+		<div class="marvel-device nexus5">
+		    <div class="top-bar"></div>
+		    <div class="sleep"></div>
+		    <div class="camera"></div>
+		    <div class="sensor"></div>
+		    <div class="speaker"></div>
+		    <div class="screen">
 
-	<div class="marvel-device nexus5">
-	    <div class="top-bar"></div>
-	    <div class="sleep"></div>
-	    <div class="camera"></div>
-	    <div class="sensor"></div>
-	    <div class="speaker"></div>
-	    <div class="screen">
-
-	        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/qg5agp2UTV4
+		        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/qg5agp2UTV4
 ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 
-	        <video id='vertical_video' autoplay>
-	          <source src="http://newsmemecdn.azureedge.net/newsmeme/W6A4SMJM7.mp4" type="video/mp4">
-	        	Your browser does not support the video tag.
-	        </video>
+		        <video id='vertical_video' autoplay>
+		          <source src="http://newsmemecdn.azureedge.net/newsmeme/W6A4SMJM7.mp4" type="video/mp4">
+		        	Your browser does not support the video tag.
+		        </video>
 
-	        <!-- <div class='phone_content'>
-		        <p class="title">asdasd Faraday&#39;s law of induction</p>
-		        <hr>
-		        <p class='summary'>Faraday&#39;s law of induction is a basic law of electromagnetism predicting how a magnetic field will interact with an electric circuit to produce an electromotive force EMF is a phenomenon called electromagnetic induction. It is the fundamental operating principle of transformers, inductors, and many types of electrical motors, generators &amp; solenoids. The Maxwell–Faraday equation is a generalization of Faraday&#39;s law, and is 1of Maxwell&#39;s equations.</p>
-		        <br>
-		        <p class="narrator">
-		        	<b>Memed by</b> Bot
-		        </p>
-		    </div> -->
-		    <a href="/">
-		    	<p>Next News</p>
-			</a>
+		        <!-- <div class='phone_content'>
+			        <p class="title">asdasd Faraday&#39;s law of induction</p>
+			        <hr>
+			        <p class='summary'>Faraday&#39;s law of induction is a basic law of electromagnetism predicting how a magnetic field will interact with an electric circuit to produce an electromotive force EMF is a phenomenon called electromagnetic induction. It is the fundamental operating principle of transformers, inductors, and many types of electrical motors, generators &amp; solenoids. The Maxwell–Faraday equation is a generalization of Faraday&#39;s law, and is 1of Maxwell&#39;s equations.</p>
+			        <br>
+			        <p class="narrator">
+			        	<b>Memed by</b> Bot
+			        </p>
+			    </div> -->
+			    <a href="/">
+			    	<p>Next News</p>
+				</a>
 
-	    </div>
-	    <div class="home"></div>
+		    </div>
+		    <div class="home"></div>
+		</div>
 	</div>
 
     
@@ -274,6 +277,9 @@
 		  	  "showMethod": "fadeIn",
 		  	  "hideMethod": "fadeOut"
 		  	};
+
+		  	//alert($(window).height());
+		  	$('#mobile').css("height", '300px !important'); 
 
 		};
 

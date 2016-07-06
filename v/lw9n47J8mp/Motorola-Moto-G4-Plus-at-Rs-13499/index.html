@@ -109,9 +109,10 @@
 		height: 100%;
 		border: 2px black dashed;
 	}
-	.marvel-device{
-		max-height: 600px !important;
+	#mobile{
+		height: auto;
 	}
+
 </style>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
@@ -157,38 +158,40 @@
             <div class="billy-video">
 
                 
+	
+	<div id='mobile'>
+		<div class="marvel-device nexus5">
+		    <div class="top-bar"></div>
+		    <div class="sleep"></div>
+		    <div class="camera"></div>
+		    <div class="sensor"></div>
+		    <div class="speaker"></div>
+		    <div class="screen">
 
-	<div class="marvel-device nexus5">
-	    <div class="top-bar"></div>
-	    <div class="sleep"></div>
-	    <div class="camera"></div>
-	    <div class="sensor"></div>
-	    <div class="speaker"></div>
-	    <div class="screen">
-
-	        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/Hcjua6SZ_J8
+		        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/Hcjua6SZ_J8
 ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 
-	        <video id='vertical_video' autoplay>
-	          <source src="http://newsmemecdn.azureedge.net/newsmeme/E166VV10A.mp4" type="video/mp4">
-	        	Your browser does not support the video tag.
-	        </video>
+		        <video id='vertical_video' autoplay>
+		          <source src="http://newsmemecdn.azureedge.net/newsmeme/E166VV10A.mp4" type="video/mp4">
+		        	Your browser does not support the video tag.
+		        </video>
 
-	        <!-- <div class='phone_content'>
-		        <p class="title">asdasd Motorola Moto G4 Plus at Rs 13499</p>
-		        <hr>
-		        <p class='summary'>Motorola Moto G4 Plus smartphone was launched in May 2016. Motorola Moto G4 Plus is powered by 1.5GHz octa-core Qualcomm Snapdragon 617 processor and it comes with 2GB of RAM. The phone packs 16GB of internal storage that can be expanded up to 128GB. Motorola Moto G4 Plus packs a 16-megapixel primary camera on the rear and a 5-megapixel front shooter for selfies. It runs Android 6.0 .1 &amp; its cost is Rs 13499. The battery capacity is 3000, m A h.</p>
-		        <br>
-		        <p class="narrator">
-		        	<b>Memed by</b> Bot
-		        </p>
-		    </div> -->
-		    <a href="/">
-		    	<p>Next News</p>
-			</a>
+		        <!-- <div class='phone_content'>
+			        <p class="title">asdasd Motorola Moto G4 Plus at Rs 13499</p>
+			        <hr>
+			        <p class='summary'>Motorola Moto G4 Plus smartphone was launched in May 2016. Motorola Moto G4 Plus is powered by 1.5GHz octa-core Qualcomm Snapdragon 617 processor and it comes with 2GB of RAM. The phone packs 16GB of internal storage that can be expanded up to 128GB. Motorola Moto G4 Plus packs a 16-megapixel primary camera on the rear and a 5-megapixel front shooter for selfies. It runs Android 6.0 .1 &amp; its cost is Rs 13499. The battery capacity is 3000, m A h.</p>
+			        <br>
+			        <p class="narrator">
+			        	<b>Memed by</b> Bot
+			        </p>
+			    </div> -->
+			    <a href="/">
+			    	<p>Next News</p>
+				</a>
 
-	    </div>
-	    <div class="home"></div>
+		    </div>
+		    <div class="home"></div>
+		</div>
 	</div>
 
     
@@ -274,6 +277,9 @@
 		  	  "showMethod": "fadeIn",
 		  	  "hideMethod": "fadeOut"
 		  	};
+
+		  	//alert($(window).height());
+		  	$('#mobile').css("height", '300px !important'); 
 
 		};
 

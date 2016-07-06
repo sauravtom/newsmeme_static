@@ -82,9 +82,7 @@
 		border: 2px black dashed;
 	}
 	#mobile{
-		position: absolute;
-		  top: 40px;
-		  bottom: 40px;
+		height: auto;
 	}
 
 </style>
@@ -169,8 +167,8 @@
 		  	  "hideMethod": "fadeOut"
 		  	};
 
-		  	alert($(window).height());
-		  	
+		  	//alert($(window).height());
+		  	$('#mobile').css("height", '300px !important'); 
 
 		};
 

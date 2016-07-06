@@ -81,9 +81,7 @@
 		text-align: justify;
 	}
 	.screen{
-		border: 5px white;
-		background: white;
-		overflow-y:scroll;
+		background: black;
 	}
 	.screen::-webkit-scrollbar { 
 	    display: none; 
@@ -93,9 +91,7 @@
 		font-size: 12px;
 		text-align: left;
 	}
-	.phone_content{
-		padding: 5px;
-	}
+	
 	.desc1{
 		font-size: 27px;
 		color: purple;
@@ -108,11 +104,18 @@
 		top:50%;
 		right: 5px;
 	}
-	.header{
-		padding:2px;
-		font-size: 11px;
+	#vertical_video{
+		width: 100%;
+		height: 100%;
+		border: 2px black dashed;
 	}
+	#mobile{
+		height: auto;
+	}
+
 </style>
+
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 
 
         <style type="text/css">
@@ -142,8 +145,9 @@
 
           <div class="footer">
             <!-- <a class="twitter" target='_blank' href="https://medium.com/@sauravtom/okay-let-s-talk-about-bitcoin-ae3a94c6550c#.w4vmmn8z7">About</a> -->
-            <a class="legal" target='_blank' href="https://medium.com/@newsmeme/what-is-newsmeme-91c70ac42a8">About NewsMeme</a>
-            <a class="twitter" target='_blank' href="http://facebook.com/newsmemedotin">Facebook</a>
+            
+            <a class="legal" href="#">About NewsMeme</a>
+            <a target='_blank' href="https://medium.com/@newsmeme/what-is-newsmeme-91c70ac42a8">Blog</a>
             <a class="support" target='_blank' href="http://fb.me/msg/newsmemedotin">Feedback</a>
             <a class="support" href="mailto:saurav@newsmeme.in">Business</a>
           </div>
@@ -154,41 +158,42 @@
             <div class="billy-video">
 
                 
+	
+	<div id='mobile'>
+		<div class="marvel-device nexus5">
+		    <div class="top-bar"></div>
+		    <div class="sleep"></div>
+		    <div class="camera"></div>
+		    <div class="sensor"></div>
+		    <div class="speaker"></div>
+		    <div class="screen">
 
-	<div class="marvel-device s5 white">
-	    <div class="top-bar"></div>
-	    <div class="sleep"></div>
-	    <div class="camera"></div>
-	    <div class="sensor"></div>
-	    <div class="speaker"></div>
-	    <div class="screen">
-	        <!-- Content goes here -->
-	        
-	        <p class='header'>NewsMeme</p>
+		        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/VcKuV_DgiVQ
+?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 
-	        <iframe width="853" height="480" src="https://www.youtube.com/embed/VcKuV_DgiVQ
-?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+		        <video id='vertical_video' autoplay>
+		          <source src="" type="video/mp4">
+		        	Your browser does not support the video tag.
+		        </video>
 
-	        <div class='phone_content'>
-		        <p class="title">IAF choppers blowing off Trikuta Hills fire</p>
-		        <hr>
-		        <p class='summary'>Indian Air Force choppers today helped in controlling devastating fire, which broke out in forests of Trikuta Hills, the abode of Vaishno Devi in Reasi district of Jammu &amp; Kashmir. Choppers of IAF carried water from reservoir of Salal Dam to douse the flames which erupted yesterday &amp; nearly half of the fire has been controlled. Authorities have managed to bring devastating fire under control &amp; over 200 men including firemen and staff are at work.</p>
-		        <br>
-		        <p class="narrator">
-		        	<b>Memed by</b> Surbhi
-		        </p>
+		        <!-- <div class='phone_content'>
+			        <p class="title">asdasd IAF choppers blowing off Trikuta Hills fire</p>
+			        <hr>
+			        <p class='summary'>Indian Air Force choppers today helped in controlling devastating fire, which broke out in forests of Trikuta Hills, the abode of Vaishno Devi in Reasi district of Jammu &amp; Kashmir. Choppers of IAF carried water from reservoir of Salal Dam to douse the flames which erupted yesterday &amp; nearly half of the fire has been controlled. Authorities have managed to bring devastating fire under control &amp; over 200 men including firemen and staff are at work.</p>
+			        <br>
+			        <p class="narrator">
+			        	<b>Memed by</b> Surbhi
+			        </p>
+			    </div> -->
+			    <a href="/">
+			    	<p>Next News</p>
+				</a>
+
 		    </div>
-
-	        <script data-cfasync="false">
-	          (function(r,e,E,m,b){E[r]=E[r]||{};E[r][b]=E[r][b]||function(){
-	          (E[r].q=E[r].q||[]).push(arguments)};b=m.getElementsByTagName(e)[0];m=m.createElement(e);
-	          m.async=1;m.src=("file:"==location.protocol?"https:":"")+"//s.reembed.com/G-Xwv02A.js";
-	          b.parentNode.insertBefore(m,b)})("reEmbed","script",window,document,"api");
-	        </script>
-
-	    </div>
-	    <div class="home"></div>
+		    <div class="home"></div>
+		</div>
 	</div>
+
     
     <!-- TODO
 		1) Add a modal to menu buttons (or we can just hyperlink)
@@ -217,8 +222,13 @@
             <figure class="close">
                 <img src="http://projects.aljazeera.com.s3.amazonaws.com/2013/guantanamo-hunger-strikes/imgs/close-button_v.png" alt="close modal" />
             </figure>
-            <h3>About NewsMeme</h3>
-            <p>Content Text Here</p>
+            <h3>News reimagined for the millenials as exciting visual stories 📰👉📺 😃</h3>
+            <p>NewsMeme is a new way to know more about what's happening around you. We make videos about viral and trending topics for your favourite social media platforms. We post 30 sec videos on <a target='_blank' href="https://facebook.com/newsmemedotin">facebook</a>  and <a target='_blank' href="https://www.youtube.com/channel/UCtoOk6vvunyUZnJ24bq9kcQ">youtube</a>, 15 sec square videos on <a target='_blank' href="https://www.instagram.com/newsmemedotin/">instagram</a>, 6 sec loopy videos on <a target='_blank' href="https://vine.co/u/1320799459999137792">vine</a> and 3sec gifs on <a target='_blank' href="http://twitter.com/newsmemedotin">twitter</a>. <br><br>
+                Like NewsMeme ? <a href="https://twitter.com/sauravtom/status/741231210844819456">Check out our pitch video. 😃 😄</a> 
+            <br><br>
+            Are you a media business looking for semi-automated solutions to engage with your audience on various social media platforms via visual content(gifs/videos/images) ? <br> If yes, please watch <a target='_blank' href="https://twitter.com/newsmemedotin/status/735027532563644416">this video</a> and let's <a target='_blank' href="https://twitter.com/sauravtom">get in touch 😃</a> 
+            </p>
+
         </div>
       </div>
 
@@ -246,12 +256,41 @@
         
 
 	<script type="text/javascript">
-		
+
+		window.onload = function() {
+			toastr["info"]("You can click on the video to Pause/Play it", "Hi there 😃 😄");
+
+		  	toastr.options = {
+		  	  "closeButton": true,
+		  	  "debug": false,
+		  	  "newestOnTop": false,
+		  	  "progressBar": true,
+		  	  "positionClass": "toast-top-center",
+		  	  "preventDuplicates": false,
+		  	  "onclick": null,
+		  	  "showDuration": "300",
+		  	  "hideDuration": "1000",
+		  	  "timeOut": "10000",
+		  	  "extendedTimeOut": "1000",
+		  	  "showEasing": "swing",
+		  	  "hideEasing": "linear",
+		  	  "showMethod": "fadeIn",
+		  	  "hideMethod": "fadeOut"
+		  	};
+
+		  	//alert($(window).height());
+		  	$('#mobile').css("height", '300px !important'); 
+
+		};
+
+		$('#vertical_video').click(function(){this.paused?this.play():this.pause();});
 
 	</script>
+	<!-- Go to www.addthis.com/dashboard to customize your tools -->
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-577cf03f648c87bf"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
 
     </body>
 
-<!-- Mirrored from www.billyapp.co/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Apr 2016 08:30:14 GMT -->
 </html>

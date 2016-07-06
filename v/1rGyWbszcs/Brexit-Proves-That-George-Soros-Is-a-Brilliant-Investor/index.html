@@ -109,9 +109,10 @@
 		height: 100%;
 		border: 2px black dashed;
 	}
-	.marvel-device{
-		max-height: 600px !important;
+	#mobile{
+		height: auto;
 	}
+
 </style>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
@@ -157,38 +158,40 @@
             <div class="billy-video">
 
                 
+	
+	<div id='mobile'>
+		<div class="marvel-device nexus5">
+		    <div class="top-bar"></div>
+		    <div class="sleep"></div>
+		    <div class="camera"></div>
+		    <div class="sensor"></div>
+		    <div class="speaker"></div>
+		    <div class="screen">
 
-	<div class="marvel-device nexus5">
-	    <div class="top-bar"></div>
-	    <div class="sleep"></div>
-	    <div class="camera"></div>
-	    <div class="sensor"></div>
-	    <div class="speaker"></div>
-	    <div class="screen">
-
-	        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/n4cJ76PBDcA
+		        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/n4cJ76PBDcA
 ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 
-	        <video id='vertical_video' autoplay>
-	          <source src="http://newsmemecdn.azureedge.net/newsmeme/PEG80Y1F4.mp4" type="video/mp4">
-	        	Your browser does not support the video tag.
-	        </video>
+		        <video id='vertical_video' autoplay>
+		          <source src="http://newsmemecdn.azureedge.net/newsmeme/PEG80Y1F4.mp4" type="video/mp4">
+		        	Your browser does not support the video tag.
+		        </video>
 
-	        <!-- <div class='phone_content'>
-		        <p class="title">asdasd Brexit Proves That George Soros Is a Brilliant Investor</p>
-		        <hr>
-		        <p class='summary'>Billionaire investor George Soros betted against the U.K.&#39;s pound sterling in 1992 &amp; made a billion dollars in profit. Soros revealed he&#39;s betting heavily against markets because of rising economic uncertainty &amp; earlier this week, he went on record against the U.K leaving the EU because of the potential financial fallout. Now that Britons have officially voted for an exit, or &#34;Brexit,&#34; Soros&#39; bearish bets appear to be incredibly savvy once again.</p>
-		        <br>
-		        <p class="narrator">
-		        	<b>Memed by</b> Bot
-		        </p>
-		    </div> -->
-		    <a href="/">
-		    	<p>Next News</p>
-			</a>
+		        <!-- <div class='phone_content'>
+			        <p class="title">asdasd Brexit Proves That George Soros Is a Brilliant Investor</p>
+			        <hr>
+			        <p class='summary'>Billionaire investor George Soros betted against the U.K.&#39;s pound sterling in 1992 &amp; made a billion dollars in profit. Soros revealed he&#39;s betting heavily against markets because of rising economic uncertainty &amp; earlier this week, he went on record against the U.K leaving the EU because of the potential financial fallout. Now that Britons have officially voted for an exit, or &#34;Brexit,&#34; Soros&#39; bearish bets appear to be incredibly savvy once again.</p>
+			        <br>
+			        <p class="narrator">
+			        	<b>Memed by</b> Bot
+			        </p>
+			    </div> -->
+			    <a href="/">
+			    	<p>Next News</p>
+				</a>
 
-	    </div>
-	    <div class="home"></div>
+		    </div>
+		    <div class="home"></div>
+		</div>
 	</div>
 
     
@@ -274,6 +277,9 @@
 		  	  "showMethod": "fadeIn",
 		  	  "hideMethod": "fadeOut"
 		  	};
+
+		  	//alert($(window).height());
+		  	$('#mobile').css("height", '300px !important'); 
 
 		};
 

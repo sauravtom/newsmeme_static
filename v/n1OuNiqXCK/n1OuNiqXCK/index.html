@@ -109,9 +109,10 @@
 		height: 100%;
 		border: 2px black dashed;
 	}
-	.marvel-device{
-		max-height: 600px !important;
+	#mobile{
+		height: auto;
 	}
+
 </style>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
@@ -157,38 +158,40 @@
             <div class="billy-video">
 
                 
+	
+	<div id='mobile'>
+		<div class="marvel-device nexus5">
+		    <div class="top-bar"></div>
+		    <div class="sleep"></div>
+		    <div class="camera"></div>
+		    <div class="sensor"></div>
+		    <div class="speaker"></div>
+		    <div class="screen">
 
-	<div class="marvel-device nexus5">
-	    <div class="top-bar"></div>
-	    <div class="sleep"></div>
-	    <div class="camera"></div>
-	    <div class="sensor"></div>
-	    <div class="speaker"></div>
-	    <div class="screen">
-
-	        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/9PcNQv8D5gk
+		        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/9PcNQv8D5gk
 ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 
-	        <video id='vertical_video' autoplay>
-	          <source src="http://newsmemecdn.azureedge.net/newsmeme/AKX68VDJL.mp4" type="video/mp4">
-	        	Your browser does not support the video tag.
-	        </video>
+		        <video id='vertical_video' autoplay>
+		          <source src="http://newsmemecdn.azureedge.net/newsmeme/AKX68VDJL.mp4" type="video/mp4">
+		        	Your browser does not support the video tag.
+		        </video>
 
-	        <!-- <div class='phone_content'>
-		        <p class="title">asdasd अर्थव्यवस्था की दुनिया में अरुंधती भट्टाचर्या हैं 5वी सर्वश्रेष्ठ महिला</p>
-		        <hr>
-		        <p class='summary'>देश के सबसे बड़े बैंक स्टेट बैंक ऑफ़ इंडिया की पहली महिला चेयरपर्सन अरुंधति भट्टाचार्य को जानीमानी मैगज़ीन फोर्ब्स ने फाइनेंस के क्षेत्र में दुनिया की पांच सबसे ताकतवर महिलाओं के खिताब से नवाज़ा है | साथ ही फोर्ब्स ने उन्हें दुनिया की सबसे ताकतवर महिलाओं की सूचि जिसमे कई सक्सेसफुल महिला एंट्रेप्रेनेुरस आदि शामिल हैं में पच्चीसवें स्थान पर रखा है और अरुंधति जी के नेतृत्व में एसबीआई का बेहतरीन प्रदर्शन अपने-आप-में ही उनकी काबिलियत का सबूत है |</p>
-		        <br>
-		        <p class="narrator">
-		        	<b>Memed by</b> Harshita
-		        </p>
-		    </div> -->
-		    <a href="/">
-		    	<p>Next News</p>
-			</a>
+		        <!-- <div class='phone_content'>
+			        <p class="title">asdasd अर्थव्यवस्था की दुनिया में अरुंधती भट्टाचर्या हैं 5वी सर्वश्रेष्ठ महिला</p>
+			        <hr>
+			        <p class='summary'>देश के सबसे बड़े बैंक स्टेट बैंक ऑफ़ इंडिया की पहली महिला चेयरपर्सन अरुंधति भट्टाचार्य को जानीमानी मैगज़ीन फोर्ब्स ने फाइनेंस के क्षेत्र में दुनिया की पांच सबसे ताकतवर महिलाओं के खिताब से नवाज़ा है | साथ ही फोर्ब्स ने उन्हें दुनिया की सबसे ताकतवर महिलाओं की सूचि जिसमे कई सक्सेसफुल महिला एंट्रेप्रेनेुरस आदि शामिल हैं में पच्चीसवें स्थान पर रखा है और अरुंधति जी के नेतृत्व में एसबीआई का बेहतरीन प्रदर्शन अपने-आप-में ही उनकी काबिलियत का सबूत है |</p>
+			        <br>
+			        <p class="narrator">
+			        	<b>Memed by</b> Harshita
+			        </p>
+			    </div> -->
+			    <a href="/">
+			    	<p>Next News</p>
+				</a>
 
-	    </div>
-	    <div class="home"></div>
+		    </div>
+		    <div class="home"></div>
+		</div>
 	</div>
 
     
@@ -274,6 +277,9 @@
 		  	  "showMethod": "fadeIn",
 		  	  "hideMethod": "fadeOut"
 		  	};
+
+		  	//alert($(window).height());
+		  	$('#mobile').css("height", '300px !important'); 
 
 		};
 

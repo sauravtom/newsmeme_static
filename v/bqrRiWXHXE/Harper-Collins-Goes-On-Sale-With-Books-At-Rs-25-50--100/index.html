@@ -115,9 +115,10 @@
 		height: 100%;
 		border: 2px black dashed;
 	}
-	.marvel-device{
-		max-height: 600px !important;
+	#mobile{
+		height: auto;
 	}
+
 </style>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
@@ -163,40 +164,42 @@
             <div class="billy-video">
 
                 
+	
+	<div id='mobile'>
+		<div class="marvel-device nexus5">
+		    <div class="top-bar"></div>
+		    <div class="sleep"></div>
+		    <div class="camera"></div>
+		    <div class="sensor"></div>
+		    <div class="speaker"></div>
+		    <div class="screen">
 
-	<div class="marvel-device nexus5">
-	    <div class="top-bar"></div>
-	    <div class="sleep"></div>
-	    <div class="camera"></div>
-	    <div class="sensor"></div>
-	    <div class="speaker"></div>
-	    <div class="screen">
-
-	        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/ZgKFniAiZMI
+		        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/ZgKFniAiZMI
 ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 
-	        <video id='vertical_video' autoplay>
-	          <source src="http://newsmemecdn.azureedge.net/newsmeme/ZB1EL8UG2.mp4" type="video/mp4">
-	        	Your browser does not support the video tag.
-	        </video>
+		        <video id='vertical_video' autoplay>
+		          <source src="http://newsmemecdn.azureedge.net/newsmeme/ZB1EL8UG2.mp4" type="video/mp4">
+		        	Your browser does not support the video tag.
+		        </video>
 
-	        <!-- <div class='phone_content'>
-		        <p class="title">asdasd Harper Collins Goes On Sale With Books At Rs 25, 50 &amp; 100</p>
-		        <hr>
-		        <p class='summary'>Harper Collins is organising a sale at their warehouse on June 24 &amp; 25 in Faridabad from 10am to 6pm. Anyone can get their hands on their favourite books at real cheap prices. The paperback titles will be priced at Rs 25 &amp; hardbound ones at Rs 50. They will also have coffee table books at Rs 100. 20% of all sales will be donated to Friendicoes. You can pay from cash or your ccredit or debit card. Nearest Metro Station is Badarpur.
+		        <!-- <div class='phone_content'>
+			        <p class="title">asdasd Harper Collins Goes On Sale With Books At Rs 25, 50 &amp; 100</p>
+			        <hr>
+			        <p class='summary'>Harper Collins is organising a sale at their warehouse on June 24 &amp; 25 in Faridabad from 10am to 6pm. Anyone can get their hands on their favourite books at real cheap prices. The paperback titles will be priced at Rs 25 &amp; hardbound ones at Rs 50. They will also have coffee table books at Rs 100. 20% of all sales will be donated to Friendicoes. You can pay from cash or your ccredit or debit card. Nearest Metro Station is Badarpur.
 
 </p>
-		        <br>
-		        <p class="narrator">
-		        	<b>Memed by</b> Bot
-		        </p>
-		    </div> -->
-		    <a href="/">
-		    	<p>Next News</p>
-			</a>
+			        <br>
+			        <p class="narrator">
+			        	<b>Memed by</b> Bot
+			        </p>
+			    </div> -->
+			    <a href="/">
+			    	<p>Next News</p>
+				</a>
 
-	    </div>
-	    <div class="home"></div>
+		    </div>
+		    <div class="home"></div>
+		</div>
 	</div>
 
     
@@ -282,6 +285,9 @@
 		  	  "showMethod": "fadeIn",
 		  	  "hideMethod": "fadeOut"
 		  	};
+
+		  	//alert($(window).height());
+		  	$('#mobile').css("height", '300px !important'); 
 
 		};
 

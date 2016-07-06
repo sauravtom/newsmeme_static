@@ -109,9 +109,10 @@
 		height: 100%;
 		border: 2px black dashed;
 	}
-	.marvel-device{
-		max-height: 600px !important;
+	#mobile{
+		height: auto;
 	}
+
 </style>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
@@ -157,38 +158,40 @@
             <div class="billy-video">
 
                 
+	
+	<div id='mobile'>
+		<div class="marvel-device nexus5">
+		    <div class="top-bar"></div>
+		    <div class="sleep"></div>
+		    <div class="camera"></div>
+		    <div class="sensor"></div>
+		    <div class="speaker"></div>
+		    <div class="screen">
 
-	<div class="marvel-device nexus5">
-	    <div class="top-bar"></div>
-	    <div class="sleep"></div>
-	    <div class="camera"></div>
-	    <div class="sensor"></div>
-	    <div class="speaker"></div>
-	    <div class="screen">
-
-	        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/RQbzf8TlGyU
+		        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/RQbzf8TlGyU
 ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 
-	        <video id='vertical_video' autoplay>
-	          <source src="http://newsmemecdn.azureedge.net/newsmeme/K8MAR5R4T.mp4" type="video/mp4">
-	        	Your browser does not support the video tag.
-	        </video>
+		        <video id='vertical_video' autoplay>
+		          <source src="http://newsmemecdn.azureedge.net/newsmeme/K8MAR5R4T.mp4" type="video/mp4">
+		        	Your browser does not support the video tag.
+		        </video>
 
-	        <!-- <div class='phone_content'>
-		        <p class="title">asdasd &#39;उड़ता पंजाब&#39; का दबदबा कायम, बॉक्स ऑफिस पर किया धमाल</p>
-		        <hr>
-		        <p class='summary'>फिल्म उड़ता पंजाब केवल पंजाब ही नहीं बल्कि देश के हर उस हिस्से की कहानी है जहां के युवा ड्रग्स की चपेट में हैं | फिल्म में आलिया भट्ट और शहीद कपूर ने बहुत ही बेहतरीन अभिनय का प्रदर्शन कर ड्रग्स की लत के पीछे छुपी भयानक तस्वीर को बहुत ही बारीकी से पेश किया है | साथ ही फिल्म में करीना एक डॉक्टर और पंजाबी फिल्म्स के एक्टर दिलजीत दोसांझ पुलिस इंस्पेक्टर के रोल में नज़र आए, जिन्होंने फिल्म में पंजाब में फैले ड्रग्स के रैकेट का पर्दा फाश किया |</p>
-		        <br>
-		        <p class="narrator">
-		        	<b>Memed by</b> Harshita
-		        </p>
-		    </div> -->
-		    <a href="/">
-		    	<p>Next News</p>
-			</a>
+		        <!-- <div class='phone_content'>
+			        <p class="title">asdasd &#39;उड़ता पंजाब&#39; का दबदबा कायम, बॉक्स ऑफिस पर किया धमाल</p>
+			        <hr>
+			        <p class='summary'>फिल्म उड़ता पंजाब केवल पंजाब ही नहीं बल्कि देश के हर उस हिस्से की कहानी है जहां के युवा ड्रग्स की चपेट में हैं | फिल्म में आलिया भट्ट और शहीद कपूर ने बहुत ही बेहतरीन अभिनय का प्रदर्शन कर ड्रग्स की लत के पीछे छुपी भयानक तस्वीर को बहुत ही बारीकी से पेश किया है | साथ ही फिल्म में करीना एक डॉक्टर और पंजाबी फिल्म्स के एक्टर दिलजीत दोसांझ पुलिस इंस्पेक्टर के रोल में नज़र आए, जिन्होंने फिल्म में पंजाब में फैले ड्रग्स के रैकेट का पर्दा फाश किया |</p>
+			        <br>
+			        <p class="narrator">
+			        	<b>Memed by</b> Harshita
+			        </p>
+			    </div> -->
+			    <a href="/">
+			    	<p>Next News</p>
+				</a>
 
-	    </div>
-	    <div class="home"></div>
+		    </div>
+		    <div class="home"></div>
+		</div>
 	</div>
 
     
@@ -274,6 +277,9 @@
 		  	  "showMethod": "fadeIn",
 		  	  "hideMethod": "fadeOut"
 		  	};
+
+		  	//alert($(window).height());
+		  	$('#mobile').css("height", '300px !important'); 
 
 		};
 

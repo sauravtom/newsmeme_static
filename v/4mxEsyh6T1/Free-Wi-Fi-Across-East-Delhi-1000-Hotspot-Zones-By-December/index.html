@@ -109,9 +109,10 @@
 		height: 100%;
 		border: 2px black dashed;
 	}
-	.marvel-device{
-		max-height: 600px !important;
+	#mobile{
+		height: auto;
 	}
+
 </style>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
@@ -157,38 +158,40 @@
             <div class="billy-video">
 
                 
+	
+	<div id='mobile'>
+		<div class="marvel-device nexus5">
+		    <div class="top-bar"></div>
+		    <div class="sleep"></div>
+		    <div class="camera"></div>
+		    <div class="sensor"></div>
+		    <div class="speaker"></div>
+		    <div class="screen">
 
-	<div class="marvel-device nexus5">
-	    <div class="top-bar"></div>
-	    <div class="sleep"></div>
-	    <div class="camera"></div>
-	    <div class="sensor"></div>
-	    <div class="speaker"></div>
-	    <div class="screen">
-
-	        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/qI-qWetx3kY
+		        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/qI-qWetx3kY
 ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 
-	        <video id='vertical_video' autoplay>
-	          <source src="http://newsmemecdn.azureedge.net/newsmeme/3XUZQJ08T.mp4" type="video/mp4">
-	        	Your browser does not support the video tag.
-	        </video>
+		        <video id='vertical_video' autoplay>
+		          <source src="http://newsmemecdn.azureedge.net/newsmeme/3XUZQJ08T.mp4" type="video/mp4">
+		        	Your browser does not support the video tag.
+		        </video>
 
-	        <!-- <div class='phone_content'>
-		        <p class="title">asdasd Free Wi-Fi Across East Delhi, 1000 Hotspot Zones By December</p>
-		        <hr>
-		        <p class='summary'>Over 500 locations across East Delhi will be made high-speed wi-fi zones by the end of 2016, allowing access to free internet till a pre-determined limit daily, the Delhi government said. Providing free wi-fi across the national capital was 1 of the key poll promises of the ruling Aam Aadmi Party. The govt has also decided to lay down a common fibre-optic network across the city to make it possible for Delhiites to access the web in gigabit speed</p>
-		        <br>
-		        <p class="narrator">
-		        	<b>Memed by</b> Bot
-		        </p>
-		    </div> -->
-		    <a href="/">
-		    	<p>Next News</p>
-			</a>
+		        <!-- <div class='phone_content'>
+			        <p class="title">asdasd Free Wi-Fi Across East Delhi, 1000 Hotspot Zones By December</p>
+			        <hr>
+			        <p class='summary'>Over 500 locations across East Delhi will be made high-speed wi-fi zones by the end of 2016, allowing access to free internet till a pre-determined limit daily, the Delhi government said. Providing free wi-fi across the national capital was 1 of the key poll promises of the ruling Aam Aadmi Party. The govt has also decided to lay down a common fibre-optic network across the city to make it possible for Delhiites to access the web in gigabit speed</p>
+			        <br>
+			        <p class="narrator">
+			        	<b>Memed by</b> Bot
+			        </p>
+			    </div> -->
+			    <a href="/">
+			    	<p>Next News</p>
+				</a>
 
-	    </div>
-	    <div class="home"></div>
+		    </div>
+		    <div class="home"></div>
+		</div>
 	</div>
 
     
@@ -274,6 +277,9 @@
 		  	  "showMethod": "fadeIn",
 		  	  "hideMethod": "fadeOut"
 		  	};
+
+		  	//alert($(window).height());
+		  	$('#mobile').css("height", '300px !important'); 
 
 		};
 

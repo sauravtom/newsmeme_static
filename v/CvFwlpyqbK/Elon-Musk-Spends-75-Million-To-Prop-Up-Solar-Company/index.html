@@ -109,9 +109,10 @@
 		height: 100%;
 		border: 2px black dashed;
 	}
-	.marvel-device{
-		max-height: 600px !important;
+	#mobile{
+		height: auto;
 	}
+
 </style>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
@@ -157,38 +158,40 @@
             <div class="billy-video">
 
                 
+	
+	<div id='mobile'>
+		<div class="marvel-device nexus5">
+		    <div class="top-bar"></div>
+		    <div class="sleep"></div>
+		    <div class="camera"></div>
+		    <div class="sensor"></div>
+		    <div class="speaker"></div>
+		    <div class="screen">
 
-	<div class="marvel-device nexus5">
-	    <div class="top-bar"></div>
-	    <div class="sleep"></div>
-	    <div class="camera"></div>
-	    <div class="sensor"></div>
-	    <div class="speaker"></div>
-	    <div class="screen">
-
-	        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/3ppQFgTH_14
+		        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/3ppQFgTH_14
 ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 
-	        <video id='vertical_video' autoplay>
-	          <source src="http://newsmemecdn.azureedge.net/newsmeme/EZDWY0HM8.mp4" type="video/mp4">
-	        	Your browser does not support the video tag.
-	        </video>
+		        <video id='vertical_video' autoplay>
+		          <source src="http://newsmemecdn.azureedge.net/newsmeme/EZDWY0HM8.mp4" type="video/mp4">
+		        	Your browser does not support the video tag.
+		        </video>
 
-	        <!-- <div class='phone_content'>
-		        <p class="title">asdasd Elon Musk Spends $75 Million To Prop Up Solar Company</p>
-		        <hr>
-		        <p class='summary'>Liberal billionaire Elon Musk is using his taxpayer-backed space company to prop up his ailing taxpayer-backed solar panel company. Musk’s SpaceX will pump another $75 million into SolarCity, according to a Monday report by a financial news outlet. SolarCity offered to sell $95 million in short-term bonds with a very high interest rate of up to 5.25%. Musk himself invested $10 million of his personal fortune into SolarCity in February.</p>
-		        <br>
-		        <p class="narrator">
-		        	<b>Memed by</b> Bot
-		        </p>
-		    </div> -->
-		    <a href="/">
-		    	<p>Next News</p>
-			</a>
+		        <!-- <div class='phone_content'>
+			        <p class="title">asdasd Elon Musk Spends $75 Million To Prop Up Solar Company</p>
+			        <hr>
+			        <p class='summary'>Liberal billionaire Elon Musk is using his taxpayer-backed space company to prop up his ailing taxpayer-backed solar panel company. Musk’s SpaceX will pump another $75 million into SolarCity, according to a Monday report by a financial news outlet. SolarCity offered to sell $95 million in short-term bonds with a very high interest rate of up to 5.25%. Musk himself invested $10 million of his personal fortune into SolarCity in February.</p>
+			        <br>
+			        <p class="narrator">
+			        	<b>Memed by</b> Bot
+			        </p>
+			    </div> -->
+			    <a href="/">
+			    	<p>Next News</p>
+				</a>
 
-	    </div>
-	    <div class="home"></div>
+		    </div>
+		    <div class="home"></div>
+		</div>
 	</div>
 
     
@@ -274,6 +277,9 @@
 		  	  "showMethod": "fadeIn",
 		  	  "hideMethod": "fadeOut"
 		  	};
+
+		  	//alert($(window).height());
+		  	$('#mobile').css("height", '300px !important'); 
 
 		};
 

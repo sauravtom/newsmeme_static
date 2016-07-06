@@ -109,9 +109,10 @@
 		height: 100%;
 		border: 2px black dashed;
 	}
-	.marvel-device{
-		max-height: 600px !important;
+	#mobile{
+		height: auto;
 	}
+
 </style>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
@@ -157,38 +158,40 @@
             <div class="billy-video">
 
                 
+	
+	<div id='mobile'>
+		<div class="marvel-device nexus5">
+		    <div class="top-bar"></div>
+		    <div class="sleep"></div>
+		    <div class="camera"></div>
+		    <div class="sensor"></div>
+		    <div class="speaker"></div>
+		    <div class="screen">
 
-	<div class="marvel-device nexus5">
-	    <div class="top-bar"></div>
-	    <div class="sleep"></div>
-	    <div class="camera"></div>
-	    <div class="sensor"></div>
-	    <div class="speaker"></div>
-	    <div class="screen">
-
-	        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/aEijZT89b5g
+		        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/aEijZT89b5g
 ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 
-	        <video id='vertical_video' autoplay>
-	          <source src="http://newsmemecdn.azureedge.net/newsmeme/3MK1FP7MB.mp4" type="video/mp4">
-	        	Your browser does not support the video tag.
-	        </video>
+		        <video id='vertical_video' autoplay>
+		          <source src="http://newsmemecdn.azureedge.net/newsmeme/3MK1FP7MB.mp4" type="video/mp4">
+		        	Your browser does not support the video tag.
+		        </video>
 
-	        <!-- <div class='phone_content'>
-		        <p class="title">asdasd ट्विटर पर अब डालिए 30 नही 140 सेकेंड्स लंबी वीडियो</p>
-		        <hr>
-		        <p class='summary'>माइक्रो ब्लॉगिंग वेबसाइट ट्विटर पर यूज़र्स अब 140 सेकण्ड्स लम्बी वीडियोस पोस्ट कर सकेंगे | इससे पहले ट्विटर पर आप केवल 30 सेकण्ड्स तक की वीडियोस ही पोस्ट कर सकते थे जो की कई बार अपनी बात पूरी तरह से रखने के लिए काफी नहीं होता था ऐसे में यूज़र्स की सहूलियत और फेसबुक, स्नैपचैट जैसे प्लेटफॉर्म्स से मिल रहे कम्पटीशन को ध्यान में रखते हुए कंपनी ने ये कदम उठाया है |</p>
-		        <br>
-		        <p class="narrator">
-		        	<b>Memed by</b> Harshita
-		        </p>
-		    </div> -->
-		    <a href="/">
-		    	<p>Next News</p>
-			</a>
+		        <!-- <div class='phone_content'>
+			        <p class="title">asdasd ट्विटर पर अब डालिए 30 नही 140 सेकेंड्स लंबी वीडियो</p>
+			        <hr>
+			        <p class='summary'>माइक्रो ब्लॉगिंग वेबसाइट ट्विटर पर यूज़र्स अब 140 सेकण्ड्स लम्बी वीडियोस पोस्ट कर सकेंगे | इससे पहले ट्विटर पर आप केवल 30 सेकण्ड्स तक की वीडियोस ही पोस्ट कर सकते थे जो की कई बार अपनी बात पूरी तरह से रखने के लिए काफी नहीं होता था ऐसे में यूज़र्स की सहूलियत और फेसबुक, स्नैपचैट जैसे प्लेटफॉर्म्स से मिल रहे कम्पटीशन को ध्यान में रखते हुए कंपनी ने ये कदम उठाया है |</p>
+			        <br>
+			        <p class="narrator">
+			        	<b>Memed by</b> Harshita
+			        </p>
+			    </div> -->
+			    <a href="/">
+			    	<p>Next News</p>
+				</a>
 
-	    </div>
-	    <div class="home"></div>
+		    </div>
+		    <div class="home"></div>
+		</div>
 	</div>
 
     
@@ -274,6 +277,9 @@
 		  	  "showMethod": "fadeIn",
 		  	  "hideMethod": "fadeOut"
 		  	};
+
+		  	//alert($(window).height());
+		  	$('#mobile').css("height", '300px !important'); 
 
 		};
 

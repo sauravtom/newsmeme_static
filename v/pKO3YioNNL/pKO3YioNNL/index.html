@@ -109,9 +109,10 @@
 		height: 100%;
 		border: 2px black dashed;
 	}
-	.marvel-device{
-		max-height: 600px !important;
+	#mobile{
+		height: auto;
 	}
+
 </style>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
@@ -157,38 +158,40 @@
             <div class="billy-video">
 
                 
+	
+	<div id='mobile'>
+		<div class="marvel-device nexus5">
+		    <div class="top-bar"></div>
+		    <div class="sleep"></div>
+		    <div class="camera"></div>
+		    <div class="sensor"></div>
+		    <div class="speaker"></div>
+		    <div class="screen">
 
-	<div class="marvel-device nexus5">
-	    <div class="top-bar"></div>
-	    <div class="sleep"></div>
-	    <div class="camera"></div>
-	    <div class="sensor"></div>
-	    <div class="speaker"></div>
-	    <div class="screen">
-
-	        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/ec5Qk9Ob0F0
+		        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/ec5Qk9Ob0F0
 ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 
-	        <video id='vertical_video' autoplay>
-	          <source src="http://newsmemecdn.azureedge.net/newsmeme/U83TLHJ8M.mp4" type="video/mp4">
-	        	Your browser does not support the video tag.
-	        </video>
+		        <video id='vertical_video' autoplay>
+		          <source src="http://newsmemecdn.azureedge.net/newsmeme/U83TLHJ8M.mp4" type="video/mp4">
+		        	Your browser does not support the video tag.
+		        </video>
 
-	        <!-- <div class='phone_content'>
-		        <p class="title">asdasd 22 साल की लड़की ने छुड़ाया 111 बाल मज़दूरों गुजरात की फॅक्टरी से</p>
-		        <hr>
-		        <p class='summary'>अहमदाबाद में रहने वाली 22 साल की एक बीबीए स्टूडेंट झरना जोशी ने बिना पुलिस या किसी सरकारी संसथान की मदत लिए एक एक सीक्रेट मिशन कंडक्ट कर 111 बच्चों को गुजारत के मोरबी इलाके में स्थित एक सिरेमिक फैक्ट्री की गिरफ्त से आज़ाद कराया | 111 में से 100 लड़कियां हैं और इन बच्चों से ज़बरदस्ती इस फैक्ट्री में काम करवाया जाता था | झरना जोशी के इस हौसले को टीम न्यूज़मीम का सलाम और आशा है की सरकार झरना की इस कोशिश से सीख ले कर इस ओर कुछ कड़े कदम उठाएगी |</p>
-		        <br>
-		        <p class="narrator">
-		        	<b>Memed by</b> Harshita
-		        </p>
-		    </div> -->
-		    <a href="/">
-		    	<p>Next News</p>
-			</a>
+		        <!-- <div class='phone_content'>
+			        <p class="title">asdasd 22 साल की लड़की ने छुड़ाया 111 बाल मज़दूरों गुजरात की फॅक्टरी से</p>
+			        <hr>
+			        <p class='summary'>अहमदाबाद में रहने वाली 22 साल की एक बीबीए स्टूडेंट झरना जोशी ने बिना पुलिस या किसी सरकारी संसथान की मदत लिए एक एक सीक्रेट मिशन कंडक्ट कर 111 बच्चों को गुजारत के मोरबी इलाके में स्थित एक सिरेमिक फैक्ट्री की गिरफ्त से आज़ाद कराया | 111 में से 100 लड़कियां हैं और इन बच्चों से ज़बरदस्ती इस फैक्ट्री में काम करवाया जाता था | झरना जोशी के इस हौसले को टीम न्यूज़मीम का सलाम और आशा है की सरकार झरना की इस कोशिश से सीख ले कर इस ओर कुछ कड़े कदम उठाएगी |</p>
+			        <br>
+			        <p class="narrator">
+			        	<b>Memed by</b> Harshita
+			        </p>
+			    </div> -->
+			    <a href="/">
+			    	<p>Next News</p>
+				</a>
 
-	    </div>
-	    <div class="home"></div>
+		    </div>
+		    <div class="home"></div>
+		</div>
 	</div>
 
     
@@ -274,6 +277,9 @@
 		  	  "showMethod": "fadeIn",
 		  	  "hideMethod": "fadeOut"
 		  	};
+
+		  	//alert($(window).height());
+		  	$('#mobile').css("height", '300px !important'); 
 
 		};
 

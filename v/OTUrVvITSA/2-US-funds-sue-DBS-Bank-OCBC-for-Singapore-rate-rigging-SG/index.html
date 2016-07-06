@@ -109,9 +109,10 @@
 		height: 100%;
 		border: 2px black dashed;
 	}
-	.marvel-device{
-		max-height: 600px !important;
+	#mobile{
+		height: auto;
 	}
+
 </style>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
@@ -157,38 +158,40 @@
             <div class="billy-video">
 
                 
+	
+	<div id='mobile'>
+		<div class="marvel-device nexus5">
+		    <div class="top-bar"></div>
+		    <div class="sleep"></div>
+		    <div class="camera"></div>
+		    <div class="sensor"></div>
+		    <div class="speaker"></div>
+		    <div class="screen">
 
-	<div class="marvel-device nexus5">
-	    <div class="top-bar"></div>
-	    <div class="sleep"></div>
-	    <div class="camera"></div>
-	    <div class="sensor"></div>
-	    <div class="speaker"></div>
-	    <div class="screen">
-
-	        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/vXWD-svq20Q
+		        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/vXWD-svq20Q
 ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 
-	        <video id='vertical_video' autoplay>
-	          <source src="http://newsmemecdn.azureedge.net/newsmeme/CU5CGMSP4.mp4" type="video/mp4">
-	        	Your browser does not support the video tag.
-	        </video>
+		        <video id='vertical_video' autoplay>
+		          <source src="http://newsmemecdn.azureedge.net/newsmeme/CU5CGMSP4.mp4" type="video/mp4">
+		        	Your browser does not support the video tag.
+		        </video>
 
-	        <!-- <div class='phone_content'>
-		        <p class="title">asdasd 2 US funds sue DBS Bank, OCBC for Singapore rate rigging (SG)</p>
-		        <hr>
-		        <p class='summary'>2 US-based investment funds have filed a lawsuit in New York against dozens of banks accusing them of conspiring to rig derivative prices incorporating Singapore interest rate benchmark. The suit was filed by Greenwich, Connecticut-based FrontPoint Asian Event Driven Fund &amp; New York-based Sonterra Capital Master Fund &amp; traces back to the 2013 scandal in Singapore when more than 100 traders tried to rig key borrowing &amp; currency rates.</p>
-		        <br>
-		        <p class="narrator">
-		        	<b>Memed by</b> Bot
-		        </p>
-		    </div> -->
-		    <a href="/">
-		    	<p>Next News</p>
-			</a>
+		        <!-- <div class='phone_content'>
+			        <p class="title">asdasd 2 US funds sue DBS Bank, OCBC for Singapore rate rigging (SG)</p>
+			        <hr>
+			        <p class='summary'>2 US-based investment funds have filed a lawsuit in New York against dozens of banks accusing them of conspiring to rig derivative prices incorporating Singapore interest rate benchmark. The suit was filed by Greenwich, Connecticut-based FrontPoint Asian Event Driven Fund &amp; New York-based Sonterra Capital Master Fund &amp; traces back to the 2013 scandal in Singapore when more than 100 traders tried to rig key borrowing &amp; currency rates.</p>
+			        <br>
+			        <p class="narrator">
+			        	<b>Memed by</b> Bot
+			        </p>
+			    </div> -->
+			    <a href="/">
+			    	<p>Next News</p>
+				</a>
 
-	    </div>
-	    <div class="home"></div>
+		    </div>
+		    <div class="home"></div>
+		</div>
 	</div>
 
     
@@ -274,6 +277,9 @@
 		  	  "showMethod": "fadeIn",
 		  	  "hideMethod": "fadeOut"
 		  	};
+
+		  	//alert($(window).height());
+		  	$('#mobile').css("height", '300px !important'); 
 
 		};
 

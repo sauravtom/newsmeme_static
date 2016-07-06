@@ -109,9 +109,10 @@
 		height: 100%;
 		border: 2px black dashed;
 	}
-	.marvel-device{
-		max-height: 600px !important;
+	#mobile{
+		height: auto;
 	}
+
 </style>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
@@ -157,38 +158,40 @@
             <div class="billy-video">
 
                 
+	
+	<div id='mobile'>
+		<div class="marvel-device nexus5">
+		    <div class="top-bar"></div>
+		    <div class="sleep"></div>
+		    <div class="camera"></div>
+		    <div class="sensor"></div>
+		    <div class="speaker"></div>
+		    <div class="screen">
 
-	<div class="marvel-device nexus5">
-	    <div class="top-bar"></div>
-	    <div class="sleep"></div>
-	    <div class="camera"></div>
-	    <div class="sensor"></div>
-	    <div class="speaker"></div>
-	    <div class="screen">
-
-	        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/ngzm-YYrnx8
+		        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/ngzm-YYrnx8
 ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 
-	        <video id='vertical_video' autoplay>
-	          <source src="http://newsmemecdn.azureedge.net/newsmeme/10UWPTUQD.mp4" type="video/mp4">
-	        	Your browser does not support the video tag.
-	        </video>
+		        <video id='vertical_video' autoplay>
+		          <source src="http://newsmemecdn.azureedge.net/newsmeme/10UWPTUQD.mp4" type="video/mp4">
+		        	Your browser does not support the video tag.
+		        </video>
 
-	        <!-- <div class='phone_content'>
-		        <p class="title">asdasd Facebook Rolls Out Universal App for Windows 10 in Beta </p>
-		        <hr>
-		        <p class='summary'>Microsoft has finally got the long awaited official Facebook app for Windows that would be available for Windows 10-powered personal computers &amp; smartphones. The new Facebook app, now in beta, is a Universal Windows app that&#39;s developed &amp; published by FB. It&#39;s listed on the Windows Store. The latest release will work on Windows 10 PCs, tablets &amp; smartphones. Mobile app that was available till now was developed by Microsoft on behalf of Facebook</p>
-		        <br>
-		        <p class="narrator">
-		        	<b>Memed by</b> Bot
-		        </p>
-		    </div> -->
-		    <a href="/">
-		    	<p>Next News</p>
-			</a>
+		        <!-- <div class='phone_content'>
+			        <p class="title">asdasd Facebook Rolls Out Universal App for Windows 10 in Beta </p>
+			        <hr>
+			        <p class='summary'>Microsoft has finally got the long awaited official Facebook app for Windows that would be available for Windows 10-powered personal computers &amp; smartphones. The new Facebook app, now in beta, is a Universal Windows app that&#39;s developed &amp; published by FB. It&#39;s listed on the Windows Store. The latest release will work on Windows 10 PCs, tablets &amp; smartphones. Mobile app that was available till now was developed by Microsoft on behalf of Facebook</p>
+			        <br>
+			        <p class="narrator">
+			        	<b>Memed by</b> Bot
+			        </p>
+			    </div> -->
+			    <a href="/">
+			    	<p>Next News</p>
+				</a>
 
-	    </div>
-	    <div class="home"></div>
+		    </div>
+		    <div class="home"></div>
+		</div>
 	</div>
 
     
@@ -274,6 +277,9 @@
 		  	  "showMethod": "fadeIn",
 		  	  "hideMethod": "fadeOut"
 		  	};
+
+		  	//alert($(window).height());
+		  	$('#mobile').css("height", '300px !important'); 
 
 		};
 

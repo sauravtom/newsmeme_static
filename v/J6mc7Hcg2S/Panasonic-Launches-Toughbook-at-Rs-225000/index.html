@@ -109,9 +109,10 @@
 		height: 100%;
 		border: 2px black dashed;
 	}
-	.marvel-device{
-		max-height: 600px !important;
+	#mobile{
+		height: auto;
 	}
+
 </style>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
@@ -157,38 +158,40 @@
             <div class="billy-video">
 
                 
+	
+	<div id='mobile'>
+		<div class="marvel-device nexus5">
+		    <div class="top-bar"></div>
+		    <div class="sleep"></div>
+		    <div class="camera"></div>
+		    <div class="sensor"></div>
+		    <div class="speaker"></div>
+		    <div class="screen">
 
-	<div class="marvel-device nexus5">
-	    <div class="top-bar"></div>
-	    <div class="sleep"></div>
-	    <div class="camera"></div>
-	    <div class="sensor"></div>
-	    <div class="speaker"></div>
-	    <div class="screen">
-
-	        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/TMwFaBhlnIg
+		        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/TMwFaBhlnIg
 ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 
-	        <video id='vertical_video' autoplay>
-	          <source src="http://newsmemecdn.azureedge.net/newsmeme/VISGMIKMY.mp4" type="video/mp4">
-	        	Your browser does not support the video tag.
-	        </video>
+		        <video id='vertical_video' autoplay>
+		          <source src="http://newsmemecdn.azureedge.net/newsmeme/VISGMIKMY.mp4" type="video/mp4">
+		        	Your browser does not support the video tag.
+		        </video>
 
-	        <!-- <div class='phone_content'>
-		        <p class="title">asdasd Panasonic Launches Toughbook at Rs 2,25,000</p>
-		        <hr>
-		        <p class='summary'>Panasonic launched a new fully-rugged, 2-in-1 lightweight Toughbook CF-20 that detaches easily to become a 10.1-inch tablet. The Rs. 2,25,000 + taxes. Toughbook CF-20 is purpose-built for challenging environments like field services, utilities, oil &amp; gas, transportation &amp; logistics, healthcare, insurance, public safety &amp; defence. In terms of durability, it meets MIL-STD-810G &amp; MIL-STD-461F military specifications, &amp; IP65 water &amp; dust resistance.</p>
-		        <br>
-		        <p class="narrator">
-		        	<b>Memed by</b> Bot
-		        </p>
-		    </div> -->
-		    <a href="/">
-		    	<p>Next News</p>
-			</a>
+		        <!-- <div class='phone_content'>
+			        <p class="title">asdasd Panasonic Launches Toughbook at Rs 2,25,000</p>
+			        <hr>
+			        <p class='summary'>Panasonic launched a new fully-rugged, 2-in-1 lightweight Toughbook CF-20 that detaches easily to become a 10.1-inch tablet. The Rs. 2,25,000 + taxes. Toughbook CF-20 is purpose-built for challenging environments like field services, utilities, oil &amp; gas, transportation &amp; logistics, healthcare, insurance, public safety &amp; defence. In terms of durability, it meets MIL-STD-810G &amp; MIL-STD-461F military specifications, &amp; IP65 water &amp; dust resistance.</p>
+			        <br>
+			        <p class="narrator">
+			        	<b>Memed by</b> Bot
+			        </p>
+			    </div> -->
+			    <a href="/">
+			    	<p>Next News</p>
+				</a>
 
-	    </div>
-	    <div class="home"></div>
+		    </div>
+		    <div class="home"></div>
+		</div>
 	</div>
 
     
@@ -274,6 +277,9 @@
 		  	  "showMethod": "fadeIn",
 		  	  "hideMethod": "fadeOut"
 		  	};
+
+		  	//alert($(window).height());
+		  	$('#mobile').css("height", '300px !important'); 
 
 		};
 

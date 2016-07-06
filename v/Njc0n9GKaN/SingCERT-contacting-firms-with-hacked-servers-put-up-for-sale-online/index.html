@@ -112,9 +112,10 @@
 		height: 100%;
 		border: 2px black dashed;
 	}
-	.marvel-device{
-		max-height: 600px !important;
+	#mobile{
+		height: auto;
 	}
+
 </style>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
@@ -160,39 +161,41 @@
             <div class="billy-video">
 
                 
+	
+	<div id='mobile'>
+		<div class="marvel-device nexus5">
+		    <div class="top-bar"></div>
+		    <div class="sleep"></div>
+		    <div class="camera"></div>
+		    <div class="sensor"></div>
+		    <div class="speaker"></div>
+		    <div class="screen">
 
-	<div class="marvel-device nexus5">
-	    <div class="top-bar"></div>
-	    <div class="sleep"></div>
-	    <div class="camera"></div>
-	    <div class="sensor"></div>
-	    <div class="speaker"></div>
-	    <div class="screen">
-
-	        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/imqIg99UDCo
+		        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/imqIg99UDCo
 ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 
-	        <video id='vertical_video' autoplay>
-	          <source src="http://newsmemecdn.azureedge.net/newsmeme/S61WVEQW6.mp4" type="video/mp4">
-	        	Your browser does not support the video tag.
-	        </video>
+		        <video id='vertical_video' autoplay>
+		          <source src="http://newsmemecdn.azureedge.net/newsmeme/S61WVEQW6.mp4" type="video/mp4">
+		        	Your browser does not support the video tag.
+		        </video>
 
-	        <!-- <div class='phone_content'>
-		        <p class="title">asdasd SingCERT contacting firms with hacked servers put up for sale online</p>
-		        <hr>
-		        <p class='summary'>According to an international IT security firm, Kaspersky Lab, there are 743 compromised servers from Singapore listed on an online trading platform, xDedic, as of May 2016. The platform allows people to buy and sell access to compromised computer servers. The Singapore Computer Emergency Response Team had taken immediate action by contacting affected companies whose servers have been compromised and put on sale online.
+		        <!-- <div class='phone_content'>
+			        <p class="title">asdasd SingCERT contacting firms with hacked servers put up for sale online</p>
+			        <hr>
+			        <p class='summary'>According to an international IT security firm, Kaspersky Lab, there are 743 compromised servers from Singapore listed on an online trading platform, xDedic, as of May 2016. The platform allows people to buy and sell access to compromised computer servers. The Singapore Computer Emergency Response Team had taken immediate action by contacting affected companies whose servers have been compromised and put on sale online.
 </p>
-		        <br>
-		        <p class="narrator">
-		        	<b>Memed by</b> Bot
-		        </p>
-		    </div> -->
-		    <a href="/">
-		    	<p>Next News</p>
-			</a>
+			        <br>
+			        <p class="narrator">
+			        	<b>Memed by</b> Bot
+			        </p>
+			    </div> -->
+			    <a href="/">
+			    	<p>Next News</p>
+				</a>
 
-	    </div>
-	    <div class="home"></div>
+		    </div>
+		    <div class="home"></div>
+		</div>
 	</div>
 
     
@@ -278,6 +281,9 @@
 		  	  "showMethod": "fadeIn",
 		  	  "hideMethod": "fadeOut"
 		  	};
+
+		  	//alert($(window).height());
+		  	$('#mobile').css("height", '300px !important'); 
 
 		};
 

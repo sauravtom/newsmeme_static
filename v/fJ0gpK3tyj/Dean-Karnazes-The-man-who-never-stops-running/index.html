@@ -109,9 +109,10 @@
 		height: 100%;
 		border: 2px black dashed;
 	}
-	.marvel-device{
-		max-height: 600px !important;
+	#mobile{
+		height: auto;
 	}
+
 </style>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
@@ -157,38 +158,40 @@
             <div class="billy-video">
 
                 
+	
+	<div id='mobile'>
+		<div class="marvel-device nexus5">
+		    <div class="top-bar"></div>
+		    <div class="sleep"></div>
+		    <div class="camera"></div>
+		    <div class="sensor"></div>
+		    <div class="speaker"></div>
+		    <div class="screen">
 
-	<div class="marvel-device nexus5">
-	    <div class="top-bar"></div>
-	    <div class="sleep"></div>
-	    <div class="camera"></div>
-	    <div class="sensor"></div>
-	    <div class="speaker"></div>
-	    <div class="screen">
-
-	        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/n08c0i1VpAA
+		        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/n08c0i1VpAA
 ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 
-	        <video id='vertical_video' autoplay>
-	          <source src="http://newsmemecdn.azureedge.net/newsmeme/J8OV8U1HF.mp4" type="video/mp4">
-	        	Your browser does not support the video tag.
-	        </video>
+		        <video id='vertical_video' autoplay>
+		          <source src="http://newsmemecdn.azureedge.net/newsmeme/J8OV8U1HF.mp4" type="video/mp4">
+		        	Your browser does not support the video tag.
+		        </video>
 
-	        <!-- <div class='phone_content'>
-		        <p class="title">asdasd Dean Karnazes: The man who never stops running</p>
-		        <hr>
-		        <p class='summary'>Dean Karnazes is an American ultramarathon runner &amp; author of Ultramarathon Man, which details ultra endurance running for the general public. He ran 560km in 80 hours &amp; 44 minutes without sleep in 2005. He also ran 50 marathons in 50 states on 50 consecutive days. At kindergarten, Karnazes began running home from school for fun. On his 12th birthday, he also cycled 40 miles to his grandparents&#39; home for fun without telling his parents.</p>
-		        <br>
-		        <p class="narrator">
-		        	<b>Memed by</b> Bot
-		        </p>
-		    </div> -->
-		    <a href="/">
-		    	<p>Next News</p>
-			</a>
+		        <!-- <div class='phone_content'>
+			        <p class="title">asdasd Dean Karnazes: The man who never stops running</p>
+			        <hr>
+			        <p class='summary'>Dean Karnazes is an American ultramarathon runner &amp; author of Ultramarathon Man, which details ultra endurance running for the general public. He ran 560km in 80 hours &amp; 44 minutes without sleep in 2005. He also ran 50 marathons in 50 states on 50 consecutive days. At kindergarten, Karnazes began running home from school for fun. On his 12th birthday, he also cycled 40 miles to his grandparents&#39; home for fun without telling his parents.</p>
+			        <br>
+			        <p class="narrator">
+			        	<b>Memed by</b> Bot
+			        </p>
+			    </div> -->
+			    <a href="/">
+			    	<p>Next News</p>
+				</a>
 
-	    </div>
-	    <div class="home"></div>
+		    </div>
+		    <div class="home"></div>
+		</div>
 	</div>
 
     
@@ -274,6 +277,9 @@
 		  	  "showMethod": "fadeIn",
 		  	  "hideMethod": "fadeOut"
 		  	};
+
+		  	//alert($(window).height());
+		  	$('#mobile').css("height", '300px !important'); 
 
 		};
 

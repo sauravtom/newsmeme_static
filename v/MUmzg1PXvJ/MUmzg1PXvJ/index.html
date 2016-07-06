@@ -109,9 +109,10 @@
 		height: 100%;
 		border: 2px black dashed;
 	}
-	.marvel-device{
-		max-height: 600px !important;
+	#mobile{
+		height: auto;
 	}
+
 </style>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
@@ -157,38 +158,40 @@
             <div class="billy-video">
 
                 
+	
+	<div id='mobile'>
+		<div class="marvel-device nexus5">
+		    <div class="top-bar"></div>
+		    <div class="sleep"></div>
+		    <div class="camera"></div>
+		    <div class="sensor"></div>
+		    <div class="speaker"></div>
+		    <div class="screen">
 
-	<div class="marvel-device nexus5">
-	    <div class="top-bar"></div>
-	    <div class="sleep"></div>
-	    <div class="camera"></div>
-	    <div class="sensor"></div>
-	    <div class="speaker"></div>
-	    <div class="screen">
-
-	        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/tgqU1ilf_Qg
+		        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/tgqU1ilf_Qg
 ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 
-	        <video id='vertical_video' autoplay>
-	          <source src="http://newsmemecdn.azureedge.net/newsmeme/D7GB12A09.mp4" type="video/mp4">
-	        	Your browser does not support the video tag.
-	        </video>
+		        <video id='vertical_video' autoplay>
+		          <source src="http://newsmemecdn.azureedge.net/newsmeme/D7GB12A09.mp4" type="video/mp4">
+		        	Your browser does not support the video tag.
+		        </video>
 
-	        <!-- <div class='phone_content'>
-		        <p class="title">asdasd वनप्लस 3 हुआ लॉंच</p>
-		        <hr>
-		        <p class='summary'>चाईनीज़ मैन्युफैक्चरर वनप्लस का तीसरा फ्लैगशिप फ़ोन वनप्लस 3, 13 जून को एक स्पेशल लांच इवेंट जो की वर्चुअल रियलिटी में भी स्ट्रीम किया गया था में कुछ बहुत ही बेहतरीन फीचर्स के साथ लांच हुआ | ये फ़ोन स्नैपड्रैगन 820 प्रोसेसर, अड्रेनो 530 जीपीयू और 6 जीबी की रैम ये लोडेड है जो की इसे एक दमदार परफॉरमेंस पैक फ़ोन बनता है | साथ ही फ़ोन में है 16 और 8 मेगापिक्सेल रियर और फ्रंट कैमरा, 3000 एमएएच बैटरी, फ़ास्ट चार्जिंग, और हाई रिज़ोल्यूशन ओएलईडी डिस्प्ले |</p>
-		        <br>
-		        <p class="narrator">
-		        	<b>Memed by</b> Harshita
-		        </p>
-		    </div> -->
-		    <a href="/">
-		    	<p>Next News</p>
-			</a>
+		        <!-- <div class='phone_content'>
+			        <p class="title">asdasd वनप्लस 3 हुआ लॉंच</p>
+			        <hr>
+			        <p class='summary'>चाईनीज़ मैन्युफैक्चरर वनप्लस का तीसरा फ्लैगशिप फ़ोन वनप्लस 3, 13 जून को एक स्पेशल लांच इवेंट जो की वर्चुअल रियलिटी में भी स्ट्रीम किया गया था में कुछ बहुत ही बेहतरीन फीचर्स के साथ लांच हुआ | ये फ़ोन स्नैपड्रैगन 820 प्रोसेसर, अड्रेनो 530 जीपीयू और 6 जीबी की रैम ये लोडेड है जो की इसे एक दमदार परफॉरमेंस पैक फ़ोन बनता है | साथ ही फ़ोन में है 16 और 8 मेगापिक्सेल रियर और फ्रंट कैमरा, 3000 एमएएच बैटरी, फ़ास्ट चार्जिंग, और हाई रिज़ोल्यूशन ओएलईडी डिस्प्ले |</p>
+			        <br>
+			        <p class="narrator">
+			        	<b>Memed by</b> Harshita
+			        </p>
+			    </div> -->
+			    <a href="/">
+			    	<p>Next News</p>
+				</a>
 
-	    </div>
-	    <div class="home"></div>
+		    </div>
+		    <div class="home"></div>
+		</div>
 	</div>
 
     
@@ -274,6 +277,9 @@
 		  	  "showMethod": "fadeIn",
 		  	  "hideMethod": "fadeOut"
 		  	};
+
+		  	//alert($(window).height());
+		  	$('#mobile').css("height", '300px !important'); 
 
 		};
 

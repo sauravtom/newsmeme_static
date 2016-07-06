@@ -109,9 +109,10 @@
 		height: 100%;
 		border: 2px black dashed;
 	}
-	.marvel-device{
-		max-height: 600px !important;
+	#mobile{
+		height: auto;
 	}
+
 </style>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
@@ -157,38 +158,40 @@
             <div class="billy-video">
 
                 
+	
+	<div id='mobile'>
+		<div class="marvel-device nexus5">
+		    <div class="top-bar"></div>
+		    <div class="sleep"></div>
+		    <div class="camera"></div>
+		    <div class="sensor"></div>
+		    <div class="speaker"></div>
+		    <div class="screen">
 
-	<div class="marvel-device nexus5">
-	    <div class="top-bar"></div>
-	    <div class="sleep"></div>
-	    <div class="camera"></div>
-	    <div class="sensor"></div>
-	    <div class="speaker"></div>
-	    <div class="screen">
-
-	        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/va6PazFIRSo
+		        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/va6PazFIRSo
 ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 
-	        <video id='vertical_video' autoplay>
-	          <source src="http://newsmemecdn.azureedge.net/newsmeme/IUQU6DOTA.mp4" type="video/mp4">
-	        	Your browser does not support the video tag.
-	        </video>
+		        <video id='vertical_video' autoplay>
+		          <source src="http://newsmemecdn.azureedge.net/newsmeme/IUQU6DOTA.mp4" type="video/mp4">
+		        	Your browser does not support the video tag.
+		        </video>
 
-	        <!-- <div class='phone_content'>
-		        <p class="title">asdasd Govt saves Rs 10,000 by striking out 1.6 crore bogus ration cards</p>
-		        <hr>
-		        <p class='summary'>Govt has eliminated 1.6 crore duplicate &amp; bogus ration cards that will help save about Rs 10,000 crore in subsidy bill annually, said Finance Secretary Ashok Lavasa. The govt has also saved Rs 14,872 crore by offering subsidy on cooking gas (LPG) directly to consumers &amp; direct benefit transfer (DBT) is planned to be extended to 150 schemes by the end of this yr. In MANREGA, 10% savings have been reported due to elimination of bogus job cards.</p>
-		        <br>
-		        <p class="narrator">
-		        	<b>Memed by</b> Bot
-		        </p>
-		    </div> -->
-		    <a href="/">
-		    	<p>Next News</p>
-			</a>
+		        <!-- <div class='phone_content'>
+			        <p class="title">asdasd Govt saves Rs 10,000 by striking out 1.6 crore bogus ration cards</p>
+			        <hr>
+			        <p class='summary'>Govt has eliminated 1.6 crore duplicate &amp; bogus ration cards that will help save about Rs 10,000 crore in subsidy bill annually, said Finance Secretary Ashok Lavasa. The govt has also saved Rs 14,872 crore by offering subsidy on cooking gas (LPG) directly to consumers &amp; direct benefit transfer (DBT) is planned to be extended to 150 schemes by the end of this yr. In MANREGA, 10% savings have been reported due to elimination of bogus job cards.</p>
+			        <br>
+			        <p class="narrator">
+			        	<b>Memed by</b> Bot
+			        </p>
+			    </div> -->
+			    <a href="/">
+			    	<p>Next News</p>
+				</a>
 
-	    </div>
-	    <div class="home"></div>
+		    </div>
+		    <div class="home"></div>
+		</div>
 	</div>
 
     
@@ -274,6 +277,9 @@
 		  	  "showMethod": "fadeIn",
 		  	  "hideMethod": "fadeOut"
 		  	};
+
+		  	//alert($(window).height());
+		  	$('#mobile').css("height", '300px !important'); 
 
 		};
 
