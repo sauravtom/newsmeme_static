@@ -86,6 +86,8 @@
 	}
 </style>
 
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
 {% endblock %}
 
 {% block title %}{{main_object.video_title}} | NewsMeme.in : Video News Summaries{% endblock %}
@@ -117,10 +119,14 @@
 		        	<b>Memed by</b> {{narrator_object.name}}
 		        </p>
 		    </div> -->
+		    <a href="/">
+		    	<p>Next News</p>
+			</a>
 
 	    </div>
 	    <div class="home"></div>
 	</div>
+
     
     <!-- TODO
 		1) Add a modal to menu buttons (or we can just hyperlink)
@@ -136,7 +142,34 @@
 {% block script %}
 
 	<script type="text/javascript">
+
+		window.onload = function() {
+			toastr["info"]("You can click on the video to Pause/Play it", "Hi there 😃 😄");
+
+		  	toastr.options = {
+		  	  "closeButton": true,
+		  	  "debug": false,
+		  	  "newestOnTop": false,
+		  	  "progressBar": true,
+		  	  "positionClass": "toast-top-center",
+		  	  "preventDuplicates": false,
+		  	  "onclick": null,
+		  	  "showDuration": "300",
+		  	  "hideDuration": "1000",
+		  	  "timeOut": "10000",
+		  	  "extendedTimeOut": "1000",
+		  	  "showEasing": "swing",
+		  	  "hideEasing": "linear",
+		  	  "showMethod": "fadeIn",
+		  	  "hideMethod": "fadeOut"
+		  	};
+
+		};
+
 		$('#vertical_video').click(function(){this.paused?this.play():this.pause();});
 
 	</script>
+	<!-- Go to www.addthis.com/dashboard to customize your tools -->
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-577cf03f648c87bf"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 {% endblock %}
